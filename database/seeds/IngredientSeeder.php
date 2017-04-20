@@ -13,339 +13,401 @@ class IngredientSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('ingredients')->delete();
-
-        DB::table('ingredients')->insert(['iName' =>'Curcumin', 'iType' => 1, 'eNumber' => 'E100', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Riboflavin', 'iType' => 1, 'eNumber' => 'E101', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Tartrazine', 'iType' => 1, 'eNumber' => 'E102', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Chrysoidine', 'iType' => 1, 'eNumber' => 'E103', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Quinoline Yellow WS', 'iType' => 1, 'eNumber' => 'E104', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Fast yellow AB', 'iType' => 1, 'eNumber' => 'E105', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Yellow 2G', 'iType' => 1, 'eNumber' => 'E107', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Sunset Yellow FCF', 'iType' => 1, 'eNumber' => 'E110', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Amylase', 'iType' => 1, 'eNumber' => 'E1100', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Protease', 'iType' => 1, 'eNumber' => 'E1101', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Invertase', 'iType' => 1, 'eNumber' => 'E1103', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Lysozyme', 'iType' => 1, 'eNumber' => 'E1105', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Carminic acid', 'iType' => 1, 'eNumber' => 'E120', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Polydextrose', 'iType' => 1, 'eNumber' => 'E1200', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Polyvinylpyrrolidone', 'iType' => 1, 'eNumber' => 'E1201', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Azorubine', 'iType' => 1, 'eNumber' => 'E122', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Amaranth (dye)', 'iType' => 1, 'eNumber' => 'E123', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Ponceau 4R', 'iType' => 1, 'eNumber' => 'E124', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Erythrosine', 'iType' => 1, 'eNumber' => 'E127', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Red 2G', 'iType' => 1, 'eNumber' => 'E128', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Allura Red AC', 'iType' => 1, 'eNumber' => 'E129', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Patent Blue V', 'iType' => 1, 'eNumber' => 'E131', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Indigo carmine', 'iType' => 1, 'eNumber' => 'E132', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Brilliant Blue FCF', 'iType' => 1, 'eNumber' => 'E133', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Chlorophyll a', 'iType' => 1, 'eNumber' => 'E140', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Dextrin', 'iType' => 1, 'eNumber' => 'E1400', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Modified starch', 'iType' => 1, 'eNumber' => 'E1401', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Oxidized Starch', 'iType' => 1, 'eNumber' => 'E1404', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Chlorophyllin', 'iType' => 1, 'eNumber' => 'E141', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Mono starch Phosphate', 'iType' => 1, 'eNumber' => 'E1410', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Distarch phosphate', 'iType' => 1, 'eNumber' => 'E1412', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Phosphated distarch phosphate', 'iType' => 1, 'eNumber' => 'E1413', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Green S', 'iType' => 1, 'eNumber' => 'E142', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Acetylated Starch', 'iType' => 1, 'eNumber' => 'E1420', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Acetylated distarch adipate', 'iType' => 1, 'eNumber' => 'E1422', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Hydroxypropyl distarch phosphate', 'iType' => 1, 'eNumber' => 'E1442', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Starch Sodium Octenyl Succinate', 'iType' => 1, 'eNumber' => 'E1450', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Acetylated Oxidized Starch', 'iType' => 1, 'eNumber' => 'E1451', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Caramel color', 'iType' => 1, 'eNumber' => 'E150', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Triethyl citrate', 'iType' => 1, 'eNumber' => 'E1505', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Brilliant Black BN', 'iType' => 1, 'eNumber' => 'E151', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Triacetin', 'iType' => 1, 'eNumber' => 'E1518', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Propylene glycol', 'iType' => 1, 'eNumber' => 'E1520', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Black carbon', 'iType' => 1, 'eNumber' => 'E153', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Brown FK', 'iType' => 1, 'eNumber' => 'E154', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Brown HT', 'iType' => 1, 'eNumber' => 'E155', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Beta carotene', 'iType' => 1, 'eNumber' => 'E160a', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Annatto', 'iType' => 1, 'eNumber' => 'E160b', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Capsanthin', 'iType' => 1, 'eNumber' => 'E160c', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Lycopene', 'iType' => 1, 'eNumber' => 'E160d', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Apocarotenal', 'iType' => 1, 'eNumber' => 'E160e', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Food orange 7', 'iType' => 1, 'eNumber' => 'E160f', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Flavoxanthin', 'iType' => 1, 'eNumber' => 'E161a', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Lutein', 'iType' => 1, 'eNumber' => 'E161b', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Cryptoxanthin', 'iType' => 1, 'eNumber' => 'E161c', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Rubixanthin', 'iType' => 1, 'eNumber' => 'E161d', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Violaxanthin', 'iType' => 1, 'eNumber' => 'E161e', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Rhodoxanthin', 'iType' => 1, 'eNumber' => 'E161f', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Canthaxanthin', 'iType' => 1, 'eNumber' => 'E161g', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Betanin', 'iType' => 1, 'eNumber' => 'E162', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Anthocyanin', 'iType' => 1, 'eNumber' => 'E163', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Calcium carbonate', 'iType' => 1, 'eNumber' => 'E170', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Titanium dioxide', 'iType' => 1, 'eNumber' => 'E171', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Iron oxide', 'iType' => 1, 'eNumber' => 'E172', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Aluminium', 'iType' => 1, 'eNumber' => 'E173', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Silver', 'iType' => 1, 'eNumber' => 'E174', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Gold', 'iType' => 1, 'eNumber' => 'E175', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Lithol rubine BK', 'iType' => 1, 'eNumber' => 'E180', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Sorbic acid', 'iType' => 1, 'eNumber' => 'E200', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Sodium sorbate', 'iType' => 1, 'eNumber' => 'E201', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Potassium sorbate', 'iType' => 1, 'eNumber' => 'E202', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Calcium sorbate', 'iType' => 1, 'eNumber' => 'E203', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Benzoic acid', 'iType' => 1, 'eNumber' => 'E210', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Sodium benzoate', 'iType' => 1, 'eNumber' => 'E211', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Potassium benzoate', 'iType' => 1, 'eNumber' => 'E212', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Calcium benzoate', 'iType' => 1, 'eNumber' => 'E213', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Ethylparaben', 'iType' => 1, 'eNumber' => 'E214', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Ethylparaben', 'iType' => 1, 'eNumber' => 'E215', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Propylparaben', 'iType' => 1, 'eNumber' => 'E216', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Propylparaben', 'iType' => 1, 'eNumber' => 'E217', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Methylparaben', 'iType' => 1, 'eNumber' => 'E218', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Sodium methylparaben', 'iType' => 1, 'eNumber' => 'E219', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Sulphur dioxide', 'iType' => 1, 'eNumber' => 'E220', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Sodium sulphite', 'iType' => 1, 'eNumber' => 'E221', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Sodium bisulfite', 'iType' => 1, 'eNumber' => 'E222', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Sodium metabisulphite', 'iType' => 1, 'eNumber' => 'E223', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Potassium metabisulphite', 'iType' => 1, 'eNumber' => 'E224', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Calcium sulfite', 'iType' => 1, 'eNumber' => 'E226', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Calcium bisulfite', 'iType' => 1, 'eNumber' => 'E227', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Potassium bisulfite', 'iType' => 1, 'eNumber' => 'E228', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Biphenyl', 'iType' => 1, 'eNumber' => 'E230', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'2-Phenylphenol', 'iType' => 1, 'eNumber' => 'E231', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Sodium orthophenyl phenol', 'iType' => 1, 'eNumber' => 'E232', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Tiabendazole', 'iType' => 1, 'eNumber' => 'E233', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Nisin', 'iType' => 1, 'eNumber' => 'E234', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Natamycin', 'iType' => 1, 'eNumber' => 'E235', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Hexamine', 'iType' => 1, 'eNumber' => 'E239', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Dimethyl dicarbonate', 'iType' => 1, 'eNumber' => 'E242', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Potassium nitrate', 'iType' => 1, 'eNumber' => 'E249', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Sodium nitrite', 'iType' => 1, 'eNumber' => 'E250', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Sodium nitrate', 'iType' => 1, 'eNumber' => 'E251', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Potassium nitrate', 'iType' => 1, 'eNumber' => 'E252', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Acetic acid', 'iType' => 1, 'eNumber' => 'E260', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Potassium acetate', 'iType' => 1, 'eNumber' => 'E261', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Sodium acetate', 'iType' => 1, 'eNumber' => 'E262', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Calcium acetate', 'iType' => 1, 'eNumber' => 'E263', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Lactic acid', 'iType' => 1, 'eNumber' => 'E270', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Propionic acid', 'iType' => 1, 'eNumber' => 'E280', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Sodium propionate', 'iType' => 1, 'eNumber' => 'E281', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Calcium propanoate', 'iType' => 1, 'eNumber' => 'E282', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Potassium propanoate', 'iType' => 1, 'eNumber' => 'E283', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Boric acid', 'iType' => 1, 'eNumber' => 'E284', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Borax', 'iType' => 1, 'eNumber' => 'E285', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Carbon dioxide', 'iType' => 1, 'eNumber' => 'E290', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Malic acid', 'iType' => 1, 'eNumber' => 'E296', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Fumaric acid', 'iType' => 1, 'eNumber' => 'E297', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Ascorbic acid', 'iType' => 1, 'eNumber' => 'E300', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Sodium ascorbate', 'iType' => 1, 'eNumber' => 'E301', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Calcium ascorbate', 'iType' => 1, 'eNumber' => 'E302', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Ascorbyl palmitate', 'iType' => 1, 'eNumber' => 'E304', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Tocopherol', 'iType' => 1, 'eNumber' => 'E306', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Tocopherol', 'iType' => 1, 'eNumber' => 'E307', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Gamma-Tocopherol', 'iType' => 1, 'eNumber' => 'E308', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Delta-Tocopherol', 'iType' => 1, 'eNumber' => 'E309', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Propyl gallate', 'iType' => 1, 'eNumber' => 'E310', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Octyl gallate', 'iType' => 1, 'eNumber' => 'E311', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Dodecyl gallate', 'iType' => 1, 'eNumber' => 'E312', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Erythorbic acid', 'iType' => 1, 'eNumber' => 'E315', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Sodium erythorbate', 'iType' => 1, 'eNumber' => 'E316', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Tert-Butylhydroquinone', 'iType' => 1, 'eNumber' => 'E319', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Butylated hydroxyanisole', 'iType' => 1, 'eNumber' => 'E320', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Butylated hydroxytoluene', 'iType' => 1, 'eNumber' => 'E321', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Lecithin', 'iType' => 1, 'eNumber' => 'E322', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Sodium lactate', 'iType' => 1, 'eNumber' => 'E325', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Potassium lactate', 'iType' => 1, 'eNumber' => 'E326', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Calcium lactate', 'iType' => 1, 'eNumber' => 'E327', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Citric acid', 'iType' => 1, 'eNumber' => 'E330', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Sodium citrate', 'iType' => 1, 'eNumber' => 'E331', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Potassium citrate', 'iType' => 1, 'eNumber' => 'E332', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Calcium citrate', 'iType' => 1, 'eNumber' => 'E333', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Tartaric acid', 'iType' => 1, 'eNumber' => 'E334', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Sodium tartrate', 'iType' => 1, 'eNumber' => 'E335', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Potassium tartrate', 'iType' => 1, 'eNumber' => 'E336', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Potassium sodium tartrate', 'iType' => 1, 'eNumber' => 'E337', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Phosphoric acid', 'iType' => 1, 'eNumber' => 'E338', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Trisodium phosphate', 'iType' => 1, 'eNumber' => 'E339', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Potassium phosphate', 'iType' => 1, 'eNumber' => 'E340', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Calcium phosphate', 'iType' => 1, 'eNumber' => 'E341', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Magnesium phosphate', 'iType' => 1, 'eNumber' => 'E343', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Sodium malate', 'iType' => 1, 'eNumber' => 'E350', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Potassium malate', 'iType' => 1, 'eNumber' => 'E351', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Calcium malate', 'iType' => 1, 'eNumber' => 'E352', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Metataric Acid', 'iType' => 1, 'eNumber' => 'E353', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Calcium tartrate', 'iType' => 1, 'eNumber' => 'E354', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Adipic acid', 'iType' => 1, 'eNumber' => 'E355', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Sodium adipate', 'iType' => 1, 'eNumber' => 'E356', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Potassium adipate', 'iType' => 1, 'eNumber' => 'E357', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Succinic acid', 'iType' => 1, 'eNumber' => 'E363', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Gamma-Butyrolactone', 'iType' => 1, 'eNumber' => 'E370', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Niacin', 'iType' => 1, 'eNumber' => 'E375', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Triammonium Citrate', 'iType' => 1, 'eNumber' => 'E380', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Ammonium ferric citrate', 'iType' => 1, 'eNumber' => 'E381', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Ethylenediaminetetraacetic acid', 'iType' => 1, 'eNumber' => 'E385', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Alginic acid', 'iType' => 1, 'eNumber' => 'E400', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Alginic acid', 'iType' => 1, 'eNumber' => 'E401', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Potassium alginate', 'iType' => 1, 'eNumber' => 'E402', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Ammonium Alginate', 'iType' => 1, 'eNumber' => 'E403', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Calcium alginate', 'iType' => 1, 'eNumber' => 'E404', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Propylene glycol alginate', 'iType' => 1, 'eNumber' => 'E405', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Agar-agar', 'iType' => 1, 'eNumber' => 'E406', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Carrageenan', 'iType' => 1, 'eNumber' => 'E407', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Locust bean gum', 'iType' => 1, 'eNumber' => 'E410', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Guar gum', 'iType' => 1, 'eNumber' => 'E412', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Tragacanth', 'iType' => 1, 'eNumber' => 'E413', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Gum arabic', 'iType' => 1, 'eNumber' => 'E414', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Xanthan gum', 'iType' => 1, 'eNumber' => 'E415', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Gum karaya', 'iType' => 1, 'eNumber' => 'E416', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Tara gum', 'iType' => 1, 'eNumber' => 'E417', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Gellan gum', 'iType' => 1, 'eNumber' => 'E418', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Sorbitol', 'iType' => 1, 'eNumber' => 'E420', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Mannitol', 'iType' => 1, 'eNumber' => 'E421', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Glycerol', 'iType' => 1, 'eNumber' => 'E422', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Konjac', 'iType' => 1, 'eNumber' => 'E425', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Polyoxyethane (8) Stearate', 'iType' => 1, 'eNumber' => 'E430', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Polyoxyethane (40) Stearate', 'iType' => 1, 'eNumber' => 'E431', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Polysorbate 20', 'iType' => 1, 'eNumber' => 'E432', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Polysorbate 80', 'iType' => 1, 'eNumber' => 'E433', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Polysorbate 40', 'iType' => 1, 'eNumber' => 'E434', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Polysorbate 60', 'iType' => 1, 'eNumber' => 'E435', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Polysorbate 65', 'iType' => 1, 'eNumber' => 'E436', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Pectin', 'iType' => 1, 'eNumber' => 'E440a', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Amidated Pectin', 'iType' => 1, 'eNumber' => 'E440b', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Gelatin', 'iType' => 1, 'eNumber' => 'E441', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Ammonium phosphatides', 'iType' => 1, 'eNumber' => 'E442', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Sucrose acetate isobutyrate', 'iType' => 1, 'eNumber' => 'E444', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Glycerol esters of wood rosins', 'iType' => 1, 'eNumber' => 'E445', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Pyrophosphate', 'iType' => 1, 'eNumber' => 'E450', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Sodium triphosphate', 'iType' => 1, 'eNumber' => 'E451', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Polyphosphate', 'iType' => 1, 'eNumber' => 'E452', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Beta-cyclodextrin', 'iType' => 1, 'eNumber' => 'E459', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Cellulose', 'iType' => 1, 'eNumber' => 'E460', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Methylcellulose', 'iType' => 1, 'eNumber' => 'E461', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Hydroxypropylcellulose', 'iType' => 1, 'eNumber' => 'E463', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Hydroxypropyl methylcellulose', 'iType' => 1, 'eNumber' => 'E464', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Ethyl methyl cellulose', 'iType' => 1, 'eNumber' => 'E465', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Carboxymethyl cellulose', 'iType' => 1, 'eNumber' => 'E466', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Ethyl hydroxyethyl cellulose', 'iType' => 1, 'eNumber' => 'E467', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Crosslinked sodium carboxymethyl cellulose', 'iType' => 1, 'eNumber' => 'E468', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Enzymically hydrolysed carboxymethylcellulose', 'iType' => 1, 'eNumber' => 'E469', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Sodium, Potassium and Calcium Salts of Fatty Acids', 'iType' => 1, 'eNumber' => 'E470', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Mono- and diglycerides of fatty acids', 'iType' => 1, 'eNumber' => 'E471', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Various Esters of Mono-and Diglycerides of Fatty Acids', 'iType' => 1, 'eNumber' => 'E472', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Di-acetyl tartrate ester of monoglyceride', 'iType' => 1, 'eNumber' => 'E472e', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Sucrose esters of fatty acids', 'iType' => 1, 'eNumber' => 'E473', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Sucroglycerides', 'iType' => 1, 'eNumber' => 'E474', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Polyglycerol esters of fatty acids', 'iType' => 1, 'eNumber' => 'E475', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Polyglycerol polyricinoleate', 'iType' => 1, 'eNumber' => 'E476', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Propane-1,2-Diol Esters of Fatty Acids', 'iType' => 1, 'eNumber' => 'E477', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Lactylated fatty acid esters of glycerol and propane-1', 'iType' => 1, 'eNumber' => 'E478', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Thermally oxidized soya bean oil interacted with mono- and diglycerides of fatty acids', 'iType' => 1, 'eNumber' => 'E479b', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Sodium stearoyl-2-lactylate', 'iType' => 1, 'eNumber' => 'E481', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Calcium stearoyl-2-lactylate', 'iType' => 1, 'eNumber' => 'E482', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Stearyl tartrate', 'iType' => 1, 'eNumber' => 'E483', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Sorbitan monostearate', 'iType' => 1, 'eNumber' => 'E491', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Sorbitan tristearate', 'iType' => 1, 'eNumber' => 'E492', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Sorbitan monolaurate', 'iType' => 1, 'eNumber' => 'E493', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Stearyl citrate', 'iType' => 1, 'eNumber' => 'E494', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Sorbitan Monopalmitate', 'iType' => 1, 'eNumber' => 'E495', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Sorbitan Trioleate', 'iType' => 1, 'eNumber' => 'E496', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Sodium carbonate', 'iType' => 1, 'eNumber' => 'E500', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Potassium carbonate', 'iType' => 1, 'eNumber' => 'E501', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Ammonium carbonate', 'iType' => 1, 'eNumber' => 'E503', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Magnesium carbonate', 'iType' => 1, 'eNumber' => 'E504', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Hydrochloric acid', 'iType' => 1, 'eNumber' => 'E507', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Potassium chloride', 'iType' => 1, 'eNumber' => 'E508', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Calcium chloride', 'iType' => 1, 'eNumber' => 'E509', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Ammonium chloride', 'iType' => 1, 'eNumber' => 'E510', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Magnesium chloride', 'iType' => 1, 'eNumber' => 'E511', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Stannous chloride', 'iType' => 1, 'eNumber' => 'E512', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Sulphuric Acid', 'iType' => 1, 'eNumber' => 'E513', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Sodium sulphate', 'iType' => 1, 'eNumber' => 'E514', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Potassium sulphate', 'iType' => 1, 'eNumber' => 'E515', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Calcium sulphate', 'iType' => 1, 'eNumber' => 'E516', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Ammonium sulphate', 'iType' => 1, 'eNumber' => 'E517', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Magnesium sulphate', 'iType' => 1, 'eNumber' => 'E518', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Aluminium sulphate', 'iType' => 1, 'eNumber' => 'E520', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Aluminium sodium sulphate', 'iType' => 1, 'eNumber' => 'E521', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Aluminium potassium sulphate', 'iType' => 1, 'eNumber' => 'E522', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Aluminium ammonium sulphate', 'iType' => 1, 'eNumber' => 'E523', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Sodium hydroxide', 'iType' => 1, 'eNumber' => 'E524', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Potassium hydroxide', 'iType' => 1, 'eNumber' => 'E525', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Calcium hydroxide', 'iType' => 1, 'eNumber' => 'E526', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Ammonium hydroxide', 'iType' => 1, 'eNumber' => 'E527', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Magnesium hydroxide', 'iType' => 1, 'eNumber' => 'E528', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Calcium oxide', 'iType' => 1, 'eNumber' => 'E529', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Magnesium oxide', 'iType' => 1, 'eNumber' => 'E530', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Sodium ferrocyanide', 'iType' => 1, 'eNumber' => 'E535', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Potassium ferrocyanide', 'iType' => 1, 'eNumber' => 'E536', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Calcium Ferrocyanide', 'iType' => 1, 'eNumber' => 'E538', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Dicalcium Ferrocyanide', 'iType' => 1, 'eNumber' => 'E540', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Sodium aluminium phosphate', 'iType' => 1, 'eNumber' => 'E541', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Bone Phosphate', 'iType' => 1, 'eNumber' => 'E542', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Calcium Polyphosphates', 'iType' => 1, 'eNumber' => 'E544', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Ammonium polyphosphate', 'iType' => 1, 'eNumber' => 'E545', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Sodium silicate', 'iType' => 1, 'eNumber' => 'E550', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Silicon dioxide', 'iType' => 1, 'eNumber' => 'E551', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Calcium silicate', 'iType' => 1, 'eNumber' => 'E552', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Magnesium silicate', 'iType' => 1, 'eNumber' => 'E553', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Sodium aluminosilicate', 'iType' => 1, 'eNumber' => 'E554', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Potassium aluminium silicate', 'iType' => 1, 'eNumber' => 'E555', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Calcium aluminosilicate', 'iType' => 1, 'eNumber' => 'E556', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Bentonite', 'iType' => 1, 'eNumber' => 'E558', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Aluminium silicate', 'iType' => 1, 'eNumber' => 'E559', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Stearic acid', 'iType' => 1, 'eNumber' => 'E570', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Magnesium stearate', 'iType' => 1, 'eNumber' => 'E572', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Gluconic acid', 'iType' => 1, 'eNumber' => 'E574', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Glucono delta-lactone', 'iType' => 1, 'eNumber' => 'E575', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Sodium gluconate', 'iType' => 1, 'eNumber' => 'E576', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Potassium gluconate', 'iType' => 1, 'eNumber' => 'E577', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Calcium gluconate', 'iType' => 1, 'eNumber' => 'E578', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Ferrous lactate', 'iType' => 1, 'eNumber' => 'E585', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Glutamic acid', 'iType' => 1, 'eNumber' => 'E620', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Monosodium glutamate', 'iType' => 1, 'eNumber' => 'E621', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Monopotassium glutamate', 'iType' => 1, 'eNumber' => 'E622', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Calcium glutamate', 'iType' => 1, 'eNumber' => 'E623', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Monoammonium glutamate', 'iType' => 1, 'eNumber' => 'E624', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Magnesium diglutamate', 'iType' => 1, 'eNumber' => 'E625', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Guanylic acid', 'iType' => 1, 'eNumber' => 'E626', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Disodium guanylate', 'iType' => 1, 'eNumber' => 'E627', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Dipotassium guanylate', 'iType' => 1, 'eNumber' => 'E628', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Calcium guanylate', 'iType' => 1, 'eNumber' => 'E629', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Inosinic acid', 'iType' => 1, 'eNumber' => 'E630', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Sodium inosinate', 'iType' => 1, 'eNumber' => 'E631', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Dipotassium inosinate', 'iType' => 1, 'eNumber' => 'E632', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Calcium inosinate', 'iType' => 1, 'eNumber' => 'E633', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Calcium5-Ribonucleotide', 'iType' => 1, 'eNumber' => 'E634', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Disodium 5-ribonucleotides', 'iType' => 1, 'eNumber' => 'E635', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Maltol', 'iType' => 1, 'eNumber' => 'E636', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Ethyl maltol', 'iType' => 1, 'eNumber' => 'E637', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Glycine', 'iType' => 1, 'eNumber' => 'E640', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Zinc acetate', 'iType' => 1, 'eNumber' => 'E650', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Dimethylpolysiloxane', 'iType' => 1, 'eNumber' => 'E900', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Beeswax', 'iType' => 1, 'eNumber' => 'E901', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Candelilla wax', 'iType' => 1, 'eNumber' => 'E902', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Carnauba wax', 'iType' => 1, 'eNumber' => 'E903', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Shellac', 'iType' => 1, 'eNumber' => 'E904', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Mineral oil', 'iType' => 1, 'eNumber' => 'E905', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Crystalline wax', 'iType' => 1, 'eNumber' => 'E907', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Montanic acid', 'iType' => 1, 'eNumber' => 'E912', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Lanolin', 'iType' => 1, 'eNumber' => 'E913', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Oxidised Polyethylene wax', 'iType' => 1, 'eNumber' => 'E914', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'L-cysteine', 'iType' => 1, 'eNumber' => 'E920', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Potassium bromate', 'iType' => 1, 'eNumber' => 'E924', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Chlorine', 'iType' => 1, 'eNumber' => 'E925', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Chlorine dioxide', 'iType' => 1, 'eNumber' => 'E926', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Carbamide', 'iType' => 1, 'eNumber' => 'E927b', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Argon', 'iType' => 1, 'eNumber' => 'E938', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Helium', 'iType' => 1, 'eNumber' => 'E939', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Nitrogen', 'iType' => 1, 'eNumber' => 'E941', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Nitrous oxide', 'iType' => 1, 'eNumber' => 'E942', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Butane', 'iType' => 1, 'eNumber' => 'E943a', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Iso-butane', 'iType' => 1, 'eNumber' => 'E943b', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Propane', 'iType' => 1, 'eNumber' => 'E944', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Hydrogen', 'iType' => 1, 'eNumber' => 'E949', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Aspartane', 'iType' => 1, 'eNumber' => 'E951', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Isomalt', 'iType' => 1, 'eNumber' => 'E953', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Saccharin', 'iType' => 1, 'eNumber' => 'E954', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Maltitol', 'iType' => 1, 'eNumber' => 'E965', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Lactitol', 'iType' => 1, 'eNumber' => 'E966', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Xylitol', 'iType' => 1, 'eNumber' => 'E967', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Erythritol', 'iType' => 1, 'eNumber' => 'E968', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
-        DB::table('ingredients')->insert(['iName' =>'Quillaia extract', 'iType' => 1, 'eNumber' => 'E999', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
+        $ing = [
+            ['iName' =>'Curcumin', 'iType' => 1, 'eNumber' => 'E100', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Riboflavin', 'iType' => 1, 'eNumber' => 'E101', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Tartrazine', 'iType' => 1, 'eNumber' => 'E102', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Chrysoidine', 'iType' => 1, 'eNumber' => 'E103', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Quinoline Yellow WS', 'iType' => 1, 'eNumber' => 'E104', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Fast yellow AB', 'iType' => 1, 'eNumber' => 'E105', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Yellow 2G', 'iType' => 1, 'eNumber' => 'E107', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Sunset Yellow FCF', 'iType' => 1, 'eNumber' => 'E110', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Amylase', 'iType' => 1, 'eNumber' => 'E1100', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Protease', 'iType' => 1, 'eNumber' => 'E1101', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Invertase', 'iType' => 1, 'eNumber' => 'E1103', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Lysozyme', 'iType' => 1, 'eNumber' => 'E1105', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Carminic acid', 'iType' => 1, 'eNumber' => 'E120', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Polydextrose', 'iType' => 1, 'eNumber' => 'E1200', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Polyvinylpyrrolidone', 'iType' => 1, 'eNumber' => 'E1201', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Azorubine', 'iType' => 1, 'eNumber' => 'E122', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Amaranth (dye)', 'iType' => 1, 'eNumber' => 'E123', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Ponceau 4R', 'iType' => 1, 'eNumber' => 'E124', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Erythrosine', 'iType' => 1, 'eNumber' => 'E127', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Red 2G', 'iType' => 1, 'eNumber' => 'E128', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Allura Red AC', 'iType' => 1, 'eNumber' => 'E129', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Patent Blue V', 'iType' => 1, 'eNumber' => 'E131', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Indigo carmine', 'iType' => 1, 'eNumber' => 'E132', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Brilliant Blue FCF', 'iType' => 1, 'eNumber' => 'E133', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Chlorophyll a', 'iType' => 1, 'eNumber' => 'E140', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Dextrin', 'iType' => 1, 'eNumber' => 'E1400', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Modified starch', 'iType' => 1, 'eNumber' => 'E1401', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Oxidized Starch', 'iType' => 1, 'eNumber' => 'E1404', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Chlorophyllin', 'iType' => 1, 'eNumber' => 'E141', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Mono starch Phosphate', 'iType' => 1, 'eNumber' => 'E1410', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Distarch phosphate', 'iType' => 1, 'eNumber' => 'E1412', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Phosphated distarch phosphate', 'iType' => 1, 'eNumber' => 'E1413', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Green S', 'iType' => 1, 'eNumber' => 'E142', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Acetylated Starch', 'iType' => 1, 'eNumber' => 'E1420', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Acetylated distarch adipate', 'iType' => 1, 'eNumber' => 'E1422', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Hydroxypropyl distarch phosphate', 'iType' => 1, 'eNumber' => 'E1442', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Starch Sodium Octenyl Succinate', 'iType' => 1, 'eNumber' => 'E1450', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Acetylated Oxidized Starch', 'iType' => 1, 'eNumber' => 'E1451', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Caramel color', 'iType' => 1, 'eNumber' => 'E150', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Triethyl citrate', 'iType' => 1, 'eNumber' => 'E1505', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Brilliant Black BN', 'iType' => 1, 'eNumber' => 'E151', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Triacetin', 'iType' => 1, 'eNumber' => 'E1518', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Propylene glycol', 'iType' => 1, 'eNumber' => 'E1520', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Black carbon', 'iType' => 1, 'eNumber' => 'E153', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Brown FK', 'iType' => 1, 'eNumber' => 'E154', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Brown HT', 'iType' => 1, 'eNumber' => 'E155', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Beta carotene', 'iType' => 1, 'eNumber' => 'E160a', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Annatto', 'iType' => 1, 'eNumber' => 'E160b', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Capsanthin', 'iType' => 1, 'eNumber' => 'E160c', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Lycopene', 'iType' => 1, 'eNumber' => 'E160d', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Apocarotenal', 'iType' => 1, 'eNumber' => 'E160e', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Food orange 7', 'iType' => 1, 'eNumber' => 'E160f', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Flavoxanthin', 'iType' => 1, 'eNumber' => 'E161a', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Lutein', 'iType' => 1, 'eNumber' => 'E161b', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Cryptoxanthin', 'iType' => 1, 'eNumber' => 'E161c', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Rubixanthin', 'iType' => 1, 'eNumber' => 'E161d', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Violaxanthin', 'iType' => 1, 'eNumber' => 'E161e', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Rhodoxanthin', 'iType' => 1, 'eNumber' => 'E161f', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Canthaxanthin', 'iType' => 1, 'eNumber' => 'E161g', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Betanin', 'iType' => 1, 'eNumber' => 'E162', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Anthocyanin', 'iType' => 1, 'eNumber' => 'E163', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Calcium carbonate', 'iType' => 1, 'eNumber' => 'E170', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Titanium dioxide', 'iType' => 1, 'eNumber' => 'E171', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Iron oxide', 'iType' => 1, 'eNumber' => 'E172', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Aluminium', 'iType' => 1, 'eNumber' => 'E173', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Silver', 'iType' => 1, 'eNumber' => 'E174', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Gold', 'iType' => 1, 'eNumber' => 'E175', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Lithol rubine BK', 'iType' => 1, 'eNumber' => 'E180', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Sorbic acid', 'iType' => 1, 'eNumber' => 'E200', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Sodium sorbate', 'iType' => 1, 'eNumber' => 'E201', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Potassium sorbate', 'iType' => 1, 'eNumber' => 'E202', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Calcium sorbate', 'iType' => 1, 'eNumber' => 'E203', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Benzoic acid', 'iType' => 1, 'eNumber' => 'E210', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Sodium benzoate', 'iType' => 1, 'eNumber' => 'E211', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Potassium benzoate', 'iType' => 1, 'eNumber' => 'E212', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Calcium benzoate', 'iType' => 1, 'eNumber' => 'E213', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Ethylparaben', 'iType' => 1, 'eNumber' => 'E214', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Ethylparaben', 'iType' => 1, 'eNumber' => 'E215', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Propylparaben', 'iType' => 1, 'eNumber' => 'E216', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Propylparaben', 'iType' => 1, 'eNumber' => 'E217', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Methylparaben', 'iType' => 1, 'eNumber' => 'E218', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Sodium methylparaben', 'iType' => 1, 'eNumber' => 'E219', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Sulphur dioxide', 'iType' => 1, 'eNumber' => 'E220', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Sodium sulphite', 'iType' => 1, 'eNumber' => 'E221', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Sodium bisulfite', 'iType' => 1, 'eNumber' => 'E222', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Sodium metabisulphite', 'iType' => 1, 'eNumber' => 'E223', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Potassium metabisulphite', 'iType' => 1, 'eNumber' => 'E224', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Calcium sulfite', 'iType' => 1, 'eNumber' => 'E226', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Calcium bisulfite', 'iType' => 1, 'eNumber' => 'E227', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Potassium bisulfite', 'iType' => 1, 'eNumber' => 'E228', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Biphenyl', 'iType' => 1, 'eNumber' => 'E230', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'2-Phenylphenol', 'iType' => 1, 'eNumber' => 'E231', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Sodium orthophenyl phenol', 'iType' => 1, 'eNumber' => 'E232', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Tiabendazole', 'iType' => 1, 'eNumber' => 'E233', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Nisin', 'iType' => 1, 'eNumber' => 'E234', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Natamycin', 'iType' => 1, 'eNumber' => 'E235', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Hexamine', 'iType' => 1, 'eNumber' => 'E239', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Dimethyl dicarbonate', 'iType' => 1, 'eNumber' => 'E242', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Potassium nitrate', 'iType' => 1, 'eNumber' => 'E249', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Sodium nitrite', 'iType' => 1, 'eNumber' => 'E250', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Sodium nitrate', 'iType' => 1, 'eNumber' => 'E251', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Potassium nitrate', 'iType' => 1, 'eNumber' => 'E252', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Acetic acid', 'iType' => 1, 'eNumber' => 'E260', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Potassium acetate', 'iType' => 1, 'eNumber' => 'E261', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Sodium acetate', 'iType' => 1, 'eNumber' => 'E262', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Calcium acetate', 'iType' => 1, 'eNumber' => 'E263', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Lactic acid', 'iType' => 1, 'eNumber' => 'E270', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Propionic acid', 'iType' => 1, 'eNumber' => 'E280', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Sodium propionate', 'iType' => 1, 'eNumber' => 'E281', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Calcium propanoate', 'iType' => 1, 'eNumber' => 'E282', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Potassium propanoate', 'iType' => 1, 'eNumber' => 'E283', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Boric acid', 'iType' => 1, 'eNumber' => 'E284', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Borax', 'iType' => 1, 'eNumber' => 'E285', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Carbon dioxide', 'iType' => 1, 'eNumber' => 'E290', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Malic acid', 'iType' => 1, 'eNumber' => 'E296', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Fumaric acid', 'iType' => 1, 'eNumber' => 'E297', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Ascorbic acid', 'iType' => 1, 'eNumber' => 'E300', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Sodium ascorbate', 'iType' => 1, 'eNumber' => 'E301', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Calcium ascorbate', 'iType' => 1, 'eNumber' => 'E302', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Ascorbyl palmitate', 'iType' => 1, 'eNumber' => 'E304', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Tocopherol', 'iType' => 1, 'eNumber' => 'E306', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Tocopherol', 'iType' => 1, 'eNumber' => 'E307', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Gamma-Tocopherol', 'iType' => 1, 'eNumber' => 'E308', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Delta-Tocopherol', 'iType' => 1, 'eNumber' => 'E309', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Propyl gallate', 'iType' => 1, 'eNumber' => 'E310', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Octyl gallate', 'iType' => 1, 'eNumber' => 'E311', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Dodecyl gallate', 'iType' => 1, 'eNumber' => 'E312', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Erythorbic acid', 'iType' => 1, 'eNumber' => 'E315', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Sodium erythorbate', 'iType' => 1, 'eNumber' => 'E316', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Tert-Butylhydroquinone', 'iType' => 1, 'eNumber' => 'E319', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Butylated hydroxyanisole', 'iType' => 1, 'eNumber' => 'E320', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Butylated hydroxytoluene', 'iType' => 1, 'eNumber' => 'E321', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Lecithin', 'iType' => 1, 'eNumber' => 'E322', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Sodium lactate', 'iType' => 1, 'eNumber' => 'E325', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Potassium lactate', 'iType' => 1, 'eNumber' => 'E326', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Calcium lactate', 'iType' => 1, 'eNumber' => 'E327', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Citric acid', 'iType' => 1, 'eNumber' => 'E330', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Sodium citrate', 'iType' => 1, 'eNumber' => 'E331', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Potassium citrate', 'iType' => 1, 'eNumber' => 'E332', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Calcium citrate', 'iType' => 1, 'eNumber' => 'E333', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Tartaric acid', 'iType' => 1, 'eNumber' => 'E334', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Sodium tartrate', 'iType' => 1, 'eNumber' => 'E335', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Potassium tartrate', 'iType' => 1, 'eNumber' => 'E336', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Potassium sodium tartrate', 'iType' => 1, 'eNumber' => 'E337', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Phosphoric acid', 'iType' => 1, 'eNumber' => 'E338', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Trisodium phosphate', 'iType' => 1, 'eNumber' => 'E339', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Potassium phosphate', 'iType' => 1, 'eNumber' => 'E340', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Calcium phosphate', 'iType' => 1, 'eNumber' => 'E341', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Magnesium phosphate', 'iType' => 1, 'eNumber' => 'E343', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Sodium malate', 'iType' => 1, 'eNumber' => 'E350', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Potassium malate', 'iType' => 1, 'eNumber' => 'E351', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Calcium malate', 'iType' => 1, 'eNumber' => 'E352', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Metataric Acid', 'iType' => 1, 'eNumber' => 'E353', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Calcium tartrate', 'iType' => 1, 'eNumber' => 'E354', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Adipic acid', 'iType' => 1, 'eNumber' => 'E355', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Sodium adipate', 'iType' => 1, 'eNumber' => 'E356', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Potassium adipate', 'iType' => 1, 'eNumber' => 'E357', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Succinic acid', 'iType' => 1, 'eNumber' => 'E363', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Gamma-Butyrolactone', 'iType' => 1, 'eNumber' => 'E370', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Niacin', 'iType' => 1, 'eNumber' => 'E375', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Triammonium Citrate', 'iType' => 1, 'eNumber' => 'E380', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Ammonium ferric citrate', 'iType' => 1, 'eNumber' => 'E381', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Ethylenediaminetetraacetic acid', 'iType' => 1, 'eNumber' => 'E385', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Alginic acid', 'iType' => 1, 'eNumber' => 'E400', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Alginic acid', 'iType' => 1, 'eNumber' => 'E401', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Potassium alginate', 'iType' => 1, 'eNumber' => 'E402', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Ammonium Alginate', 'iType' => 1, 'eNumber' => 'E403', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Calcium alginate', 'iType' => 1, 'eNumber' => 'E404', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Propylene glycol alginate', 'iType' => 1, 'eNumber' => 'E405', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Agar-agar', 'iType' => 1, 'eNumber' => 'E406', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Carrageenan', 'iType' => 1, 'eNumber' => 'E407', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Locust bean gum', 'iType' => 1, 'eNumber' => 'E410', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Guar gum', 'iType' => 1, 'eNumber' => 'E412', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Tragacanth', 'iType' => 1, 'eNumber' => 'E413', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Gum arabic', 'iType' => 1, 'eNumber' => 'E414', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Xanthan gum', 'iType' => 1, 'eNumber' => 'E415', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Gum karaya', 'iType' => 1, 'eNumber' => 'E416', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Tara gum', 'iType' => 1, 'eNumber' => 'E417', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Gellan gum', 'iType' => 1, 'eNumber' => 'E418', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Sorbitol', 'iType' => 1, 'eNumber' => 'E420', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Mannitol', 'iType' => 1, 'eNumber' => 'E421', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Glycerol', 'iType' => 1, 'eNumber' => 'E422', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Konjac', 'iType' => 1, 'eNumber' => 'E425', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Polyoxyethane (8) Stearate', 'iType' => 1, 'eNumber' => 'E430', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Polyoxyethane (40) Stearate', 'iType' => 1, 'eNumber' => 'E431', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Polysorbate 20', 'iType' => 1, 'eNumber' => 'E432', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Polysorbate 80', 'iType' => 1, 'eNumber' => 'E433', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Polysorbate 40', 'iType' => 1, 'eNumber' => 'E434', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Polysorbate 60', 'iType' => 1, 'eNumber' => 'E435', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Polysorbate 65', 'iType' => 1, 'eNumber' => 'E436', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Pectin', 'iType' => 1, 'eNumber' => 'E440a', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Amidated Pectin', 'iType' => 1, 'eNumber' => 'E440b', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Gelatin', 'iType' => 1, 'eNumber' => 'E441', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Ammonium phosphatides', 'iType' => 1, 'eNumber' => 'E442', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Sucrose acetate isobutyrate', 'iType' => 1, 'eNumber' => 'E444', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Glycerol esters of wood rosins', 'iType' => 1, 'eNumber' => 'E445', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Pyrophosphate', 'iType' => 1, 'eNumber' => 'E450', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Sodium triphosphate', 'iType' => 1, 'eNumber' => 'E451', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Polyphosphate', 'iType' => 1, 'eNumber' => 'E452', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Beta-cyclodextrin', 'iType' => 1, 'eNumber' => 'E459', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Cellulose', 'iType' => 1, 'eNumber' => 'E460', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Methylcellulose', 'iType' => 1, 'eNumber' => 'E461', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Hydroxypropylcellulose', 'iType' => 1, 'eNumber' => 'E463', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Hydroxypropyl methylcellulose', 'iType' => 1, 'eNumber' => 'E464', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Ethyl methyl cellulose', 'iType' => 1, 'eNumber' => 'E465', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Carboxymethyl cellulose', 'iType' => 1, 'eNumber' => 'E466', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Ethyl hydroxyethyl cellulose', 'iType' => 1, 'eNumber' => 'E467', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Crosslinked sodium carboxymethyl cellulose', 'iType' => 1, 'eNumber' => 'E468', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Enzymically hydrolysed carboxymethylcellulose', 'iType' => 1, 'eNumber' => 'E469', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Sodium, Potassium and Calcium Salts of Fatty Acids', 'iType' => 1, 'eNumber' => 'E470', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Mono- and diglycerides of fatty acids', 'iType' => 1, 'eNumber' => 'E471', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Various Esters of Mono-and Diglycerides of Fatty Acids', 'iType' => 1, 'eNumber' => 'E472', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Di-acetyl tartrate ester of monoglyceride', 'iType' => 1, 'eNumber' => 'E472e', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Sucrose esters of fatty acids', 'iType' => 1, 'eNumber' => 'E473', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Sucroglycerides', 'iType' => 1, 'eNumber' => 'E474', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Polyglycerol esters of fatty acids', 'iType' => 1, 'eNumber' => 'E475', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Polyglycerol polyricinoleate', 'iType' => 1, 'eNumber' => 'E476', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Propane-1,2-Diol Esters of Fatty Acids', 'iType' => 1, 'eNumber' => 'E477', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Lactylated fatty acid esters of glycerol and propane-1', 'iType' => 1, 'eNumber' => 'E478', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Thermally oxidized soya bean oil interacted with mono- and diglycerides of fatty acids', 'iType' => 1, 'eNumber' => 'E479b', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Sodium stearoyl-2-lactylate', 'iType' => 1, 'eNumber' => 'E481', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Calcium stearoyl-2-lactylate', 'iType' => 1, 'eNumber' => 'E482', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Stearyl tartrate', 'iType' => 1, 'eNumber' => 'E483', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Sorbitan monostearate', 'iType' => 1, 'eNumber' => 'E491', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Sorbitan tristearate', 'iType' => 1, 'eNumber' => 'E492', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Sorbitan monolaurate', 'iType' => 1, 'eNumber' => 'E493', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Stearyl citrate', 'iType' => 1, 'eNumber' => 'E494', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Sorbitan Monopalmitate', 'iType' => 1, 'eNumber' => 'E495', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Sorbitan Trioleate', 'iType' => 1, 'eNumber' => 'E496', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Sodium carbonate', 'iType' => 1, 'eNumber' => 'E500', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Potassium carbonate', 'iType' => 1, 'eNumber' => 'E501', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Ammonium carbonate', 'iType' => 1, 'eNumber' => 'E503', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Magnesium carbonate', 'iType' => 1, 'eNumber' => 'E504', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Hydrochloric acid', 'iType' => 1, 'eNumber' => 'E507', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Potassium chloride', 'iType' => 1, 'eNumber' => 'E508', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Calcium chloride', 'iType' => 1, 'eNumber' => 'E509', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Ammonium chloride', 'iType' => 1, 'eNumber' => 'E510', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Magnesium chloride', 'iType' => 1, 'eNumber' => 'E511', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Stannous chloride', 'iType' => 1, 'eNumber' => 'E512', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Sulphuric Acid', 'iType' => 1, 'eNumber' => 'E513', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Sodium sulphate', 'iType' => 1, 'eNumber' => 'E514', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Potassium sulphate', 'iType' => 1, 'eNumber' => 'E515', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Calcium sulphate', 'iType' => 1, 'eNumber' => 'E516', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Ammonium sulphate', 'iType' => 1, 'eNumber' => 'E517', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Magnesium sulphate', 'iType' => 1, 'eNumber' => 'E518', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Aluminium sulphate', 'iType' => 1, 'eNumber' => 'E520', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Aluminium sodium sulphate', 'iType' => 1, 'eNumber' => 'E521', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Aluminium potassium sulphate', 'iType' => 1, 'eNumber' => 'E522', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Aluminium ammonium sulphate', 'iType' => 1, 'eNumber' => 'E523', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Sodium hydroxide', 'iType' => 1, 'eNumber' => 'E524', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Potassium hydroxide', 'iType' => 1, 'eNumber' => 'E525', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Calcium hydroxide', 'iType' => 1, 'eNumber' => 'E526', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Ammonium hydroxide', 'iType' => 1, 'eNumber' => 'E527', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Magnesium hydroxide', 'iType' => 1, 'eNumber' => 'E528', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Calcium oxide', 'iType' => 1, 'eNumber' => 'E529', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Magnesium oxide', 'iType' => 1, 'eNumber' => 'E530', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Sodium ferrocyanide', 'iType' => 1, 'eNumber' => 'E535', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Potassium ferrocyanide', 'iType' => 1, 'eNumber' => 'E536', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Calcium Ferrocyanide', 'iType' => 1, 'eNumber' => 'E538', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Dicalcium Ferrocyanide', 'iType' => 1, 'eNumber' => 'E540', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Sodium aluminium phosphate', 'iType' => 1, 'eNumber' => 'E541', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Bone Phosphate', 'iType' => 1, 'eNumber' => 'E542', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Calcium Polyphosphates', 'iType' => 1, 'eNumber' => 'E544', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Ammonium polyphosphate', 'iType' => 1, 'eNumber' => 'E545', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Sodium silicate', 'iType' => 1, 'eNumber' => 'E550', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Silicon dioxide', 'iType' => 1, 'eNumber' => 'E551', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Calcium silicate', 'iType' => 1, 'eNumber' => 'E552', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Magnesium silicate', 'iType' => 1, 'eNumber' => 'E553', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Sodium aluminosilicate', 'iType' => 1, 'eNumber' => 'E554', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Potassium aluminium silicate', 'iType' => 1, 'eNumber' => 'E555', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Calcium aluminosilicate', 'iType' => 1, 'eNumber' => 'E556', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Bentonite', 'iType' => 1, 'eNumber' => 'E558', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Aluminium silicate', 'iType' => 1, 'eNumber' => 'E559', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Stearic acid', 'iType' => 1, 'eNumber' => 'E570', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Magnesium stearate', 'iType' => 1, 'eNumber' => 'E572', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Gluconic acid', 'iType' => 1, 'eNumber' => 'E574', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Glucono delta-lactone', 'iType' => 1, 'eNumber' => 'E575', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Sodium gluconate', 'iType' => 1, 'eNumber' => 'E576', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Potassium gluconate', 'iType' => 1, 'eNumber' => 'E577', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Calcium gluconate', 'iType' => 1, 'eNumber' => 'E578', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Ferrous lactate', 'iType' => 1, 'eNumber' => 'E585', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Glutamic acid', 'iType' => 1, 'eNumber' => 'E620', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Monosodium glutamate', 'iType' => 1, 'eNumber' => 'E621', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Monopotassium glutamate', 'iType' => 1, 'eNumber' => 'E622', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Calcium glutamate', 'iType' => 1, 'eNumber' => 'E623', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Monoammonium glutamate', 'iType' => 1, 'eNumber' => 'E624', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Magnesium diglutamate', 'iType' => 1, 'eNumber' => 'E625', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Guanylic acid', 'iType' => 1, 'eNumber' => 'E626', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Disodium guanylate', 'iType' => 1, 'eNumber' => 'E627', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Dipotassium guanylate', 'iType' => 1, 'eNumber' => 'E628', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Calcium guanylate', 'iType' => 1, 'eNumber' => 'E629', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Inosinic acid', 'iType' => 1, 'eNumber' => 'E630', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Sodium inosinate', 'iType' => 1, 'eNumber' => 'E631', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Dipotassium inosinate', 'iType' => 1, 'eNumber' => 'E632', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Calcium inosinate', 'iType' => 1, 'eNumber' => 'E633', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Calcium5-Ribonucleotide', 'iType' => 1, 'eNumber' => 'E634', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Disodium 5-ribonucleotides', 'iType' => 1, 'eNumber' => 'E635', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Maltol', 'iType' => 1, 'eNumber' => 'E636', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Ethyl maltol', 'iType' => 1, 'eNumber' => 'E637', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Glycine', 'iType' => 1, 'eNumber' => 'E640', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Zinc acetate', 'iType' => 1, 'eNumber' => 'E650', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Dimethylpolysiloxane', 'iType' => 1, 'eNumber' => 'E900', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Beeswax', 'iType' => 1, 'eNumber' => 'E901', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Candelilla wax', 'iType' => 1, 'eNumber' => 'E902', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Carnauba wax', 'iType' => 1, 'eNumber' => 'E903', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Shellac', 'iType' => 1, 'eNumber' => 'E904', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Mineral oil', 'iType' => 1, 'eNumber' => 'E905', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Crystalline wax', 'iType' => 1, 'eNumber' => 'E907', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Montanic acid', 'iType' => 1, 'eNumber' => 'E912', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Lanolin', 'iType' => 1, 'eNumber' => 'E913', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Oxidised Polyethylene wax', 'iType' => 1, 'eNumber' => 'E914', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'L-cysteine', 'iType' => 1, 'eNumber' => 'E920', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Potassium bromate', 'iType' => 1, 'eNumber' => 'E924', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Chlorine', 'iType' => 1, 'eNumber' => 'E925', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Chlorine dioxide', 'iType' => 1, 'eNumber' => 'E926', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Carbamide', 'iType' => 1, 'eNumber' => 'E927b', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Argon', 'iType' => 1, 'eNumber' => 'E938', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Helium', 'iType' => 1, 'eNumber' => 'E939', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Nitrogen', 'iType' => 1, 'eNumber' => 'E941', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Nitrous oxide', 'iType' => 1, 'eNumber' => 'E942', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Butane', 'iType' => 1, 'eNumber' => 'E943a', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Iso-butane', 'iType' => 1, 'eNumber' => 'E943b', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Propane', 'iType' => 1, 'eNumber' => 'E944', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Hydrogen', 'iType' => 1, 'eNumber' => 'E949', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Aspartane', 'iType' => 1, 'eNumber' => 'E951', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Isomalt', 'iType' => 1, 'eNumber' => 'E953', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Saccharin', 'iType' => 1, 'eNumber' => 'E954', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Maltitol', 'iType' => 1, 'eNumber' => 'E965', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Lactitol', 'iType' => 1, 'eNumber' => 'E966', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Xylitol', 'iType' => 1, 'eNumber' => 'E967', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Erythritol', 'iType' => 1, 'eNumber' => 'E968', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Quillaia extract', 'iType' => 1, 'eNumber' => 'E999', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['iName' =>'Whole Corn', 'iType' => 0,'eNumber' => NULL, 'created_at' => '2016-04-14 04:41:22', 'updated_at' => '2016-04-14 04:41:22'],
+            ['iName' =>'Palm Oil', 'iType' => 0,'eNumber' => NULL, 'created_at' => '2016-04-14 04:41:22', 'updated_at' => '2016-04-14 04:41:22'],
+            ['iName' =>'Flavour Enhacer', 'iType' => 0,'eNumber' => NULL, 'created_at' => '2016-04-14 04:41:22', 'updated_at' => '2016-04-14 04:41:22'],
+            ['iName' =>'Rice', 'iType' => 0,'eNumber' => NULL, 'created_at' => '2016-04-14 04:52:09', 'updated_at' => '2016-04-14 04:52:09'],
+            ['iName' =>'Corn', 'iType' => 0,'eNumber' => NULL, 'created_at' => '2016-04-14 04:52:09', 'updated_at' => '2016-04-14 04:52:09'],
+            ['iName' =>'Dextrose', 'iType' => 0,'eNumber' => NULL, 'created_at' => '2016-04-14 04:52:09', 'updated_at' => '2016-04-14 04:52:09'],
+            ['iName' =>'Vegetable Oil', 'iType' => 0,'eNumber' => NULL, 'created_at' => '2016-04-14 04:52:09', 'updated_at' => '2016-04-14 04:52:09'],
+            ['iName' =>'Sugar', 'iType' => 0,'eNumber' => NULL, 'created_at' => '2016-04-14 04:52:09', 'updated_at' => '2016-04-14 04:52:09'],
+            ['iName' =>'Soybean Powder', 'iType' => 0,'eNumber' => NULL, 'created_at' => '2016-04-14 04:52:09', 'updated_at' => '2016-04-14 04:52:09'],
+            ['iName' =>'Whey Powder', 'iType' => 0,'eNumber' => NULL, 'created_at' => '2016-04-14 04:52:09', 'updated_at' => '2016-04-14 04:52:09'],
+            ['iName' =>'Egg Powder', 'iType' => 0,'eNumber' => NULL, 'created_at' => '2016-04-14 04:52:09', 'updated_at' => '2016-04-14 04:52:09'],
+            ['iName' =>'Salt', 'iType' => 0,'eNumber' => NULL, 'created_at' => '2016-04-14 04:52:09', 'updated_at' => '2016-04-14 04:52:09'],
+            ['iName' =>'Water', 'iType' => 0,'eNumber' => NULL, 'created_at' => '2016-04-14 05:05:28', 'updated_at' => '2016-04-14 05:05:28'],
+            ['iName' =>'Wheat Flour', 'iType' => 0,'eNumber' => NULL, 'created_at' => '2016-04-14 05:05:28', 'updated_at' => '2016-04-14 05:05:28'],
+            ['iName' =>'Soya Lecithin', 'iType' => 0,'eNumber' => NULL, 'created_at' => '2016-04-14 05:05:28', 'updated_at' => '2016-04-14 05:05:28'],
+            ['iName' =>'Chocolate Sraying', 'iType' => 0,'eNumber' => NULL, 'created_at' => '2016-04-14 05:05:28', 'updated_at' => '2016-04-14 05:05:28'],
+            ['iName' =>'Chocolate Sraying', 'iType' => 0,'eNumber' => NULL, 'created_at' => '2016-04-14 05:05:28', 'updated_at' => '2016-04-14 05:05:28'],
+            ['iName' =>'Skimmed Milk Powder', 'iType' => 0,'eNumber' => NULL, 'created_at' => '2016-04-14 05:05:28', 'updated_at' => '2016-04-14 05:05:28'],
+            ['iName' =>'Glucose Syrup', 'iType' => 0,'eNumber' => NULL, 'created_at' => '2016-04-14 05:05:28', 'updated_at' => '2016-04-14 05:05:28'],
+            ['iName' =>'Maltodextrine', 'iType' => 0,'eNumber' => NULL, 'created_at' => '2016-04-14 05:05:28', 'updated_at' => '2016-04-14 05:05:28'],
+            ['iName' =>'Cocoa Powder', 'iType' => 0,'eNumber' => NULL, 'created_at' => '2016-04-14 05:05:28', 'updated_at' => '2016-04-14 05:05:28'],
+            ['iName' =>'Emulsifier', 'iType' => 0,'eNumber' => NULL, 'created_at' => '2016-04-14 05:05:28', 'updated_at' => '2016-04-14 05:05:28'],
+            ['iName' =>'White Chocolate', 'iType' => 0,'eNumber' => NULL, 'created_at' => '2016-04-14 05:05:28', 'updated_at' => '2016-04-14 05:05:28'],
+            ['iName' =>'Milk Chocolate', 'iType' => 0,'eNumber' => NULL, 'created_at' => '2016-04-14 05:05:28', 'updated_at' => '2016-04-14 05:05:28'],
+            ['iName' =>'Cream', 'iType' => 0,'eNumber' => NULL, 'created_at' => '2016-04-14 05:05:28', 'updated_at' => '2016-04-14 05:05:28'],
+            ['iName' =>'Carcamine', 'iType' => 0,'eNumber' => NULL, 'created_at' => '2016-04-14 05:05:28', 'updated_at' => '2016-04-14 05:05:28'],
+            ['iName' =>'Choco Chips', 'iType' => 0,'eNumber' => NULL, 'created_at' => '2016-04-14 05:31:00', 'updated_at' => '2016-04-14 05:31:00'],
+            ['iName' =>'Margarine', 'iType' => 0,'eNumber' => NULL, 'created_at' => '2016-04-14 05:31:00', 'updated_at' => '2016-04-14 05:31:00'],
+            ['iName' =>'Eggs', 'iType' => 0,'eNumber' => NULL, 'created_at' => '2016-04-14 05:31:00', 'updated_at' => '2016-04-14 05:31:00'],
+            ['iName' =>'Sesame Seeds Peanuts', 'iType' => 0,'eNumber' => NULL, 'created_at' => '2016-04-14 05:31:00', 'updated_at' => '2016-04-14 05:31:00'],
+            ['iName' =>'Treenuts', 'iType' => 0,'eNumber' => NULL, 'created_at' => '2016-04-14 05:31:00', 'updated_at' => '2016-04-14 05:31:00'],
+            ['iName' =>'Skimmed Milk', 'iType' => 0,'eNumber' => NULL, 'created_at' => '2016-04-14 06:17:29', 'updated_at' => '2016-04-14 06:17:29'],
+            ['iName' =>'Natural', 'iType' => 0,'eNumber' => NULL, 'created_at' => '2016-04-14 06:17:29', 'updated_at' => '2016-04-14 06:17:29'],
+            ['iName' =>'Chocolate Extract', 'iType' => 0,'eNumber' => NULL, 'created_at' => '2016-04-14 06:17:29', 'updated_at' => '2016-04-14 06:17:29'],
+            ['iName' =>'Chocolate Flavour', 'iType' => 0,'eNumber' => NULL, 'created_at' => '2016-04-14 06:17:29', 'updated_at' => '2016-04-14 06:17:29'],
+            ['iName' =>'Fresh Milk', 'iType' => 0,'eNumber' => NULL, 'created_at' => '2016-04-20 10:58:04', 'updated_at' => '2016-04-20 10:58:04'],
+            ['iName' =>'Vegetable Stabilizer', 'iType' => 0,'eNumber' => NULL, 'created_at' => '2016-04-20 10:58:04', 'updated_at' => '2016-04-20 10:58:04'],
+            ['iName' =>'Chocolate Artificial Flavor', 'iType' => 0,'eNumber' => NULL, 'created_at' => '2016-04-20 10:58:04', 'updated_at' => '2016-04-20 10:58:04'],
+            ['iName' =>'Orange Pulp', 'iType' => 0,'eNumber' => NULL, 'created_at' => '2016-04-21 20:24:00', 'updated_at' => '2016-04-21 20:24:00'],
+            ['iName' =>'Orange Concentrate', 'iType' => 0,'eNumber' => NULL, 'created_at' => '2016-04-21 20:24:00', 'updated_at' => '2016-04-21 20:24:00'],
+            ['iName' =>'Orange Flavour', 'iType' => 0,'eNumber' => NULL, 'created_at' => '2016-04-21 20:24:00', 'updated_at' => '2016-04-21 20:24:00'],
+            ['iName' =>'Vitamin C', 'iType' => 0,'eNumber' => NULL, 'created_at' => '2016-04-21 20:24:00', 'updated_at' => '2016-04-21 20:24:00'],
+            ['iName' =>'Non Diary Creamer', 'iType' => 0,'eNumber' => NULL, 'created_at' => '2016-04-21 20:29:18', 'updated_at' => '2016-04-21 20:29:18'],
+            ['iName' =>'Instant Coffee', 'iType' => 0,'eNumber' => NULL, 'created_at' => '2016-04-21 20:29:18', 'updated_at' => '2016-04-21 20:29:18'],
+            ['iName' =>'Artificial Sweetener Sucralose', 'iType' => 0,'eNumber' => NULL, 'created_at' => '2016-04-21 20:29:18', 'updated_at' => '2016-04-21 20:29:18'],
+            ['iName' =>'Acesumfame-K', 'iType' => 0,'eNumber' => NULL, 'created_at' => '2016-04-21 20:29:18', 'updated_at' => '2016-04-21 20:29:18'],
+            ['iName' =>'Mie', 'iType' => 0,'eNumber' => NULL, 'created_at' => '2016-04-23 16:52:50', 'updated_at' => '2016-04-23 16:52:50'],
+            ['iName' =>'Tapioka', 'iType' => 0,'eNumber' => NULL, 'created_at' => '2016-04-23 16:52:50', 'updated_at' => '2016-04-23 16:52:50'],
+            ['iName' =>'Sodium Poliphospate', 'iType' => 0,'eNumber' => NULL, 'created_at' => '2016-04-23 16:52:50', 'updated_at' => '2016-04-23 16:52:50'],
+            ['iName' =>'Acidity Regulator', 'iType' => 0,'eNumber' => NULL, 'created_at' => '2016-04-23 16:52:50', 'updated_at' => '2016-04-23 16:52:50'],
+            ['iName' =>'Chicken', 'iType' => 0,'eNumber' => NULL, 'created_at' => '2016-04-23 16:52:50', 'updated_at' => '2016-04-23 16:52:50'],
+            ['iName' =>'Fungi', 'iType' => 0,'eNumber' => NULL, 'created_at' => '2016-04-23 16:52:50', 'updated_at' => '2016-04-23 16:52:50'],
+            ['iName' =>'Onion', 'iType' => 0,'eNumber' => NULL, 'created_at' => '2016-04-23 16:52:50', 'updated_at' => '2016-04-23 16:52:50'],
+            ['iName' =>'Soy Sauce', 'iType' => 0,'eNumber' => NULL, 'created_at' => '2016-04-23 16:52:50', 'updated_at' => '2016-04-23 16:52:50'],
+            ['iName' =>'Sesame Oil', 'iType' => 0,'eNumber' => NULL, 'created_at' => '2016-04-23 16:52:50', 'updated_at' => '2016-04-23 16:52:50'],
+            ['iName' =>'Pepper Powder', 'iType' => 0,'eNumber' => NULL, 'created_at' => '2016-04-23 16:52:50', 'updated_at' => '2016-04-23 16:52:50'],
+            ['iName' =>'Chili', 'iType' => 0,'eNumber' => NULL, 'created_at' => '2016-04-23 16:52:50', 'updated_at' => '2016-04-23 16:52:50'],
+/*390*/     ['iName' =>'Cassava Powder', 'iType' => 0,'eNumber' => NULL, 'created_at' => '2016-04-23 16:52:50', 'updated_at' => '2016-04-23 16:52:50'],
+//401     ['id' => '401', 'iName' =>'Curcumin', 'iType' => 1,'eNumber' => 'E100', 'created_at' => '2016-04-30 02:51:57', 'updated_at' => '2016-04-30 02:51:57'],
+        ];
+    
+        // masukkan data ke database
+        DB::table('ingredients')->insert($ing);
     }
 }
