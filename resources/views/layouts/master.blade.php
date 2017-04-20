@@ -14,7 +14,7 @@
 
         @section('css')
             {!! Html::style(elixir('css/app.css')) !!}
-            {!! Html::style('https://cdn.datatables.net/t/bs/dt-1.10.11/datatables.min.css') !!}
+            {!! Html::style('css/datatables.min.css') !!}
             {!! Html::style('http://fonts.googleapis.com/css?family=Archivo+Black') !!}
             {!! Html::style(asset('vendor/nutrition-label/nutritionLabel.css')) !!}
         @show
@@ -27,12 +27,12 @@
 
             @section('js')
 
-            {!! Html::script('https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js') !!}
+            {!! Html::script('js/jquery.min.js') !!}
             {!! Html::script('js/vendor/bootstrap/bootstrap.min.js') !!}
-            {!! Html::script('https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular.min.js') !!}
-            {!! Html::script('https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular-route.min.js') !!}
+            {!! Html::script('js/angular.min.js') !!}
+            {!! Html::script('js/angular-route.min.js') !!}
             {!! Html::script(asset('vendor/nutrition-label/nutritionLabel-min.js')) !!}
-            {!! Html::script('https://cdn.datatables.net/t/bs/dt-1.10.11/datatables.min.js') !!}
+            {!! Html::script('js/datatables.min.js') !!}
             {!! Html::script('js/vendor/select2/select2.min.js') !!}
             {!! Html::script('js/vendor/typeahead-bootstrap/bootstrap-typeahead.min.js') !!}
             {!! Html::script('js/vendor/jquery.inputmask/jquery.inputmask.bundle.min.js') !!}
