@@ -12,7 +12,7 @@ class RDFBrowserController extends Controller
 {
     public function getIndex()
     {
-        $uri = Input::get('uri', 'http://halalfood.ga/resources.ttl');
+        $uri = Input::get('uri', 'http://halal.dev/resources.ttl');
         if (isset($uri)) {
             $newUri = strstr($uri, '#', true);
             if(!$newUri){

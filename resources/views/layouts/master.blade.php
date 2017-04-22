@@ -17,6 +17,7 @@
             {!! Html::style('css/datatables.min.css') !!}
             {!! Html::style('http://fonts.googleapis.com/css?family=Archivo+Black') !!}
             {!! Html::style(asset('vendor/nutrition-label/nutritionLabel.css')) !!}
+            {!! Html::style('css/custom.css') !!}
         @show
         </head>
 
