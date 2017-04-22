@@ -15,7 +15,7 @@ class UserSeeder extends Seeder{
         $user = User::create(array(
             'first_name'    => 'Admin',
             'last_name'     => 'Istrator',
-            'email'         => 'admin@halalnutritionfood.com',
+            'email'         => 'admin@halal.dev',
             'password'      => Hash::make('password')
         ));
         $user->assignRole($adminRole);
@@ -23,7 +23,7 @@ class UserSeeder extends Seeder{
         $user = User::create(array(
             'first_name'    => 'User',
             'last_name'     => 'User',
-            'email'         => 'user@halalnutritionfood.com',
+            'email'         => 'user@halal.dev',
             'password'      => Hash::make('userpassword')
         ));
         $user->assignRole($userRole);
