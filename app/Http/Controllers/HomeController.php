@@ -13,9 +13,37 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Input;
 
 class HomeController extends Controller
 {
+    /**
+     * @var The SOLR client.
+     */
+    protected $client;
+
+    /**
+     * Constructor
+     **/
+    public function __construct(\Solarium\Client $client)
+    {
+        $this->client = $client;
+    }
+
+    public function ping()
+    {
+        // create a ping query
+        $ping = $this->client->createPing();
+
+        // execute the ping query
+        try {
+            $this->client->ping($ping);
+            return response()->json('OK');
+        } catch (\Solarium\Exception $e) {
+            return response()->json('ERROR', 500);
+        }
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -23,72 +51,49 @@ class HomeController extends Controller
      */
     public function index()
     {
+        if (Input::has('q')) {
+            $query = $client->createSelect();
+            $query->setQuery(Input::get('q'));
+
+            // manually create a request for the query
+            $request = $client->createRequest($query);
+            $request->setHandler('bm25f');
+
+            // Execute the query and return the result
+            $resultset = $this->client->select($query);
+
+            // Pass the resultset to the view and return.
+            return view('pages.home', array(
+                'q' => Input::get('q'),
+                'resultset' => $resultset,
+            ));
+        }
+
+        // No query to execute, just return the search form.
         return view('pages.home');
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
+    public function search()
     {
-        //
-    }
+        if (Input::has('q')) {
+            $query = $client->createSelect();
+            $query->setQuery(Input::get('q'));
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
-    }
+            // manually create a request for the query
+            $request = $client->createRequest($query);
+            $request->setHandler('bm25f');
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
+            // Execute the query and return the result
+            $resultset = $this->client->select($query);
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
+            // Pass the resultset to the view and return.
+            return view('pages.home', array(
+                'q' => Input::get('q'),
+                'resultset' => $resultset,
+            ));
+            }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
+        // No query to execute, just return the search form.
+        return View::make('pages.home');
     }
 }

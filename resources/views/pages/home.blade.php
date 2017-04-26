@@ -25,20 +25,39 @@
 <div class="container">
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
-            <form class="">
-                <div class="panel panel-primary">
-                    <div class="panel-heading">
-                    </div>
-                    <div class="panel-body">
-                        <div class="form-group">
-                            <input name="q" class="form-control"></input>
-                        </div>
-                    </div>
-                </div>
-                <center>
-                    <button type="submit" class="btn btn-primary">Search</button>
-                </center>
-            </form>
+        {!! Form::open(array('method' => 'GET')) !!}
+        <div class="input-group">
+            {!! Form::text('q', Input::get('q'), array('class' => 'form-control input-lg', 'placeholder' => 'Enter your search term')) !!}
+            <span class="input-group-btn">
+                {!! Form::submit('Search', array('class' => 'btn btn-primary btn-lg')) !!}            
+            </span>
+        </div>
+        {!! Form::close() !!}
+        
+        @if (isset($resultset)) 
+        <p>Your search yielded <strong>{{ $resultset->getNumFound() }}</strong> results:</p>
+        <hr />
+
+        @foreach ($resultset as $document)
+
+            <h3>{{ $document->title }}</h3>
+
+            <dl>
+                <dt>Year</dt>
+                <dd>{{ $document->id }}</dd>
+
+                @if (is_array($document->food_name))
+                <dt>food_name</dt>
+                <dd>{{ implode(', ', $document->food_name) }}</dd>              
+                @endif
+
+                </dl>
+
+                {{ $document->food_man }}
+
+        @endforeach
+        @endif
+
         </div>
     </div>
 </div>

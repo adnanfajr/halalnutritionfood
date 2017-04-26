@@ -60,3 +60,6 @@ Route::controller('api', 'ApiController',[
 Route::controller('RDFBrowser', 'RDFBrowserController',[
 	'getIndex' => 'rdf.browser'
 ]);
+
+Route::get('/ping', 'HomeController@ping');
+Route::get('/search', 'HomeController@search');
