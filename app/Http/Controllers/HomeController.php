@@ -1,5 +1,12 @@
 <?php
 
+/**
+* Created by Adnan Mauludin Fajriyadi
+* "Peningkatan Relevansi Pencarian Produk Halal Dalam Aplikasi Halal Nutrition Food Menggunakan Algoritma OKAPI BM25F"
+*
+* April 2017
+*/
+
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
