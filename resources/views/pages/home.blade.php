@@ -39,10 +39,10 @@
         <p>Your search yielded <strong>{{ $resultset->getNumFound() }}</strong> results:</p>
         <hr />
             @foreach ($resultset as $doc)
-            <a href="{{ url('foodproduct',['id' => $doc->id]) }}"><h3>{{ implode(', ', $doc->food_name) }}</h3></a>
+            <a href="{{ url('foodproduct',['id' => $doc->id]) }}"><h3>{{ implode(', ', $doc->food_name) }}<small class="pull-right">{{ implode(', ', $doc->food_man) }}</small></h3></a>
             @endforeach
         @endif
-
+        <br>
         </div>
     </div>
 </div>
