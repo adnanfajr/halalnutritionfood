@@ -35,27 +35,12 @@
         {!! Form::close() !!}
         
         @if (isset($resultset)) 
+        <br>
         <p>Your search yielded <strong>{{ $resultset->getNumFound() }}</strong> results:</p>
         <hr />
-
-        @foreach ($resultset as $document)
-
-            <h3>{{ $document->title }}</h3>
-
-            <dl>
-                <dt>Year</dt>
-                <dd>{{ $document->id }}</dd>
-
-                @if (is_array($document->food_name))
-                <dt>food_name</dt>
-                <dd>{{ implode(', ', $document->food_name) }}</dd>              
-                @endif
-
-                </dl>
-
-                {{ $document->food_man }}
-
-        @endforeach
+            @foreach ($resultset as $doc)
+            <a href="{{ url('foodproduct',['id' => $doc->id]) }}"><h3>{{ implode(', ', $doc->food_name) }}</h3></a>
+            @endforeach
         @endif
 
         </div>
