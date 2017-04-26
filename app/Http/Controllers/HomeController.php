@@ -52,11 +52,13 @@ class HomeController extends Controller
     public function index()
     {
         if (Input::has('q')) {
-            $query = $client->createSelect();
+            $query = $this->client->createSelect();
+
+            // Query based on input user
             $query->setQuery(Input::get('q'));
 
             // manually create a request for the query
-            $request = $client->createRequest($query);
+            $request = $this->client->createRequest($query);
             $request->setHandler('bm25f');
 
             // Execute the query and return the result
@@ -71,29 +73,5 @@ class HomeController extends Controller
 
         // No query to execute, just return the search form.
         return view('pages.home');
-    }
-
-    public function search()
-    {
-        if (Input::has('q')) {
-            $query = $client->createSelect();
-            $query->setQuery(Input::get('q'));
-
-            // manually create a request for the query
-            $request = $client->createRequest($query);
-            $request->setHandler('bm25f');
-
-            // Execute the query and return the result
-            $resultset = $this->client->select($query);
-
-            // Pass the resultset to the view and return.
-            return view('pages.home', array(
-                'q' => Input::get('q'),
-                'resultset' => $resultset,
-            ));
-            }
-
-        // No query to execute, just return the search form.
-        return View::make('pages.home');
     }
 }
