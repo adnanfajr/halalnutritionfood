@@ -1,0 +1,105 @@
+.row {
+    margin-bottom: 30px;
+}
+
+.navbar {
+    color: #fff;
+    background-color: #14c07b;
+    position: relative;
+    min-height: 50px;
+    margin-bottom: 0px;
+    border: none;
+}
+
+.navbar-default .navbar-nav>li>a {
+    color: #fff;
+    border: none;
+}
+
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+    background-color: #14c07b;
+    color: #a3ffd9;
+
+}
+
+.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:hover, .navbar-default .navbar-nav>.open>a:focus {
+    background-color: #14c07b;
+    color: #a3ffd9;
+}
+
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+    background-color: #14c07b;
+    color: #a3ffd9;
+}
+
+/* Caret */
+.navbar-default .navbar-nav > .dropdown > a .caret {
+    border-top-color: #fff;
+    border-bottom-color: #fff;
+}
+.navbar-default .navbar-nav > .dropdown > a:hover .caret,
+.navbar-default .navbar-nav > .dropdown > a:focus .caret {
+    border-top-color: #a3ffd9;
+    border-bottom-color: #a3ffd9;
+}
+.navbar-default .navbar-nav > .open > a .caret,
+.navbar-default .navbar-nav > .open > a:hover .caret,
+.navbar-default .navbar-nav > .open > a:focus .caret {
+    border-top-color: #a3ffd9;
+    border-bottom-color: #a3ffd9;
+}
+/* Mobile version */
+.navbar-default .navbar-toggle {
+    border-color: #14c07b;
+}
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+    background-color: #14c07b;
+}
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #fff;
+}
+@media (max-width: 767px) {
+    .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+        color: #14c07b;
+    }
+    .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
+    .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+          color: #14c07b;
+    }
+}
+
+.jumbotron {
+    background-color: #14c07b;
+    color: #fff;
+    border: none;
+}
+
+.form-control:focus{
+    border-color: #a3ffd9;
+    background-color: #a3ffd9;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.btn-primary {
+    color: #ffffff;
+    background-color: #14c07b;
+    border-color: #14c07b;
+}
+
+.btn-primary:hover {
+    background-color: #009061;
+    border-color: #009061;
+}
+
+a {
+    color: #14c07b;
+}
+
+a:hover, a:focus {
+    color: #009061;
+}

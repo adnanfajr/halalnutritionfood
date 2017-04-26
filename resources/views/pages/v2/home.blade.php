@@ -9,11 +9,6 @@
 
 @section('title', 'Welcome To Halal Nutrition Food') 
 
-@section('css') 
-@parent 
-
-@endsection 
-
 @section('body')
 <div class="jumbotron">
     <div class="container">
@@ -27,16 +22,16 @@
         <div class="col-md-8 col-md-offset-2">
         {!! Form::open(array('method' => 'GET')) !!}
         <div class="input-group">
-            {!! Form::text('q', Input::get('q'), array('class' => 'form-control input-lg', 'placeholder' => 'Enter your search term')) !!}
+            {!! Form::text('q', Input::get('q'), array('class' => 'form-control input', 'placeholder' => 'Enter your search term')) !!}
             <span class="input-group-btn">
-                {!! Form::submit('Search', array('class' => 'btn btn-primary btn-lg')) !!}            
+                {!! Form::submit('Search', array('class' => 'btn btn-primary')) !!}            
             </span>
         </div>
         {!! Form::close() !!}
         
         @if (isset($resultset) && isset($debugResult) && isset($s)) 
         <br>
-        <p>Your search took <strong>{{ $s }} seconds</strong> and yielded <strong>{{ $resultset->getNumFound() }}</strong> result(s) <span class="pull-right"><a href="http://localhost:8983/solr/halal/bm25f/?q={{ $debugResult->getQueryString() }}" target="_blank">raw output</a></span></p>
+        <p>Your search took <strong>{{ $s }} seconds</strong> and yielded <strong>{{ $resultset->getNumFound() }}</strong> result(s) <span class="pull-right"><a href="{{ url('/') }}:8983/solr/halal/bm25f/?q={{ $debugResult->getQueryString() }}" target="_blank">raw output</a></span></p>
         <hr />
             @foreach ($resultset as $doc)
             <a href="{{ url('foodproduct',['id' => $doc->id]) }}"><h3>{{ implode(', ', $doc->food_name) }}</h3></a>
@@ -49,8 +44,3 @@
     </div>
 </div>
 @endsection 
-
-@section('js') 
-@parent 
-
-@endsection

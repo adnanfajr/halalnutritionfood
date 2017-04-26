@@ -1,4 +1,4 @@
-@extends('layouts.master',['nosignin' => true])
+@extends('layouts.v2.master',['nosignin' => true])
 
 @section('css')
     @parent

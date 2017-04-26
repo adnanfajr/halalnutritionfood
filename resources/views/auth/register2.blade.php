@@ -1,4 +1,4 @@
-@extends('layouts.master')
+@extends('layouts.v2.master')
 
 @section('css')
     {!! Html::style('/assets/css/register.css') !!}

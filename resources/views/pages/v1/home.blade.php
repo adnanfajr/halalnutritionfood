@@ -1,4 +1,4 @@
-@extends('layouts.master')
+@extends('layouts.v1.master')
 
 @section('title', 'Welcome To Halal Nutrition Food')
 
