@@ -1,4 +1,4 @@
-@extends('layouts.master')
+@extends('layouts.v2.master')
 
 @section('title', 'Edit Food Product')
 

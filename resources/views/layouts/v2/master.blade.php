@@ -22,9 +22,9 @@
         </head>
 
         <body>
-            @include('layouts.header')
+            @include('layouts.v2.header')
             @yield('body')
-            @include('layouts.footer')
+            @include('layouts.v2.footer')
 
             @section('js')
 

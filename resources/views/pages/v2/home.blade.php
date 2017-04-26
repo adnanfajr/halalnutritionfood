@@ -5,7 +5,7 @@
  April 2017
 --}}
 
-@extends('layouts.master') 
+@extends('layouts.v2.master') 
 
 @section('title', 'Welcome To Halal Nutrition Food') 
 
@@ -34,12 +34,14 @@
         </div>
         {!! Form::close() !!}
         
-        @if (isset($resultset) && isset($debugResult)) 
+        @if (isset($resultset) && isset($debugResult) && isset($s)) 
         <br>
-        <p>Your search yielded <strong>{{ $resultset->getNumFound() }}</strong> results: <span class="pull-right"><a href="http://localhost:8983/solr/halal/bm25f/?q={{ $debugResult->getQueryString() }}" target="_blank">raw output</a></span></p>
+        <p>Your search took <strong>{{ $s }} seconds</strong> and yielded <strong>{{ $resultset->getNumFound() }}</strong> result(s) <span class="pull-right"><a href="http://localhost:8983/solr/halal/bm25f/?q={{ $debugResult->getQueryString() }}" target="_blank">raw output</a></span></p>
         <hr />
             @foreach ($resultset as $doc)
-            <a href="{{ url('foodproduct',['id' => $doc->id]) }}"><h3>{{ implode(', ', $doc->food_name) }}<small class="pull-right">{{ implode(', ', $doc->food_man) }}</small></h3></a>
+            <a href="{{ url('foodproduct',['id' => $doc->id]) }}"><h3>{{ implode(', ', $doc->food_name) }}</h3></a>
+            <small>{{ implode(', ', $doc->food_man) }}</small>
+            <hr/>
             @endforeach
         @endif
         <br>

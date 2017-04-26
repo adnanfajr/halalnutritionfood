@@ -1,8 +1,8 @@
 <?php
 
 $s = 'public.';
-Route::get('/',         ['as' => $s . 'home',   'uses' => 'HomeController@index']);
-Route::get('/home',         ['as' => $s . 'home-old',   'uses' => 'PagesController@getHome']);
+Route::get('/',         ['as' => $s . 'home',   'uses' => 'HomeController@index']); // version 2
+Route::get('/v1',         ['as' => $s . 'home-v1',   'uses' => 'PagesController@getHome']); // version 1
 Route::get('/about',         ['as' => $s . 'about',   'uses' => 'PagesController@getAbout']);
 
 $a = 'auth.';

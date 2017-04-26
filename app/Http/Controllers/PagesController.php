@@ -10,7 +10,7 @@ class PagesController extends Controller {
 
         $foodproducts = FoodProduct::all();
         $addictives = Ingredient::where('itype',1)->get();
-        return view('pages.home-old',compact('foodproducts','addictives'));
+        return view('pages.v1.home',compact('foodproducts','addictives'));
     }
     public function getAbout()
     {

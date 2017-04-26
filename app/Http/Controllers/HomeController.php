@@ -54,9 +54,9 @@ class HomeController extends Controller
         if (Input::has('q')) {
             $select = array(
                 'query'         => Input::get('q'),
+                'handler'       => 'bm25f',
                 'start'         => 0,
                 'rows'          => 10,
-                //'fields'        => array('*', 'id', 'title', 'synopsis', 'cast', 'score'),
             );
 
             $query = $this->client->createSelect($select);
@@ -75,19 +75,23 @@ class HomeController extends Controller
             // Execute the query and return the result
             $resultset = $this->client->select($query);
 
-            //$result = $client->extract($query);
-
+            // Debug result
             $debugResult = $resultset->getDebug();
 
+            // Get query time in seconds
+            $ms = $debugResult->getTiming()->getTime();
+            $s = $ms/1000;
+
             // Pass the resultset to the view and return.
-            return view('pages.home', array(
+            return view('pages.v2.home', array(
                 'q' => Input::get('q'),
                 'resultset' => $resultset,
                 'debugResult' => $debugResult,
+                's' => $s,
             ));
         }
 
         // No query to execute, just return the search form.
-        return view('pages.home');
+        return view('pages.v2.home');
     }
 }
