@@ -52,10 +52,21 @@ class HomeController extends Controller
     public function index()
     {
         if (Input::has('q')) {
-            $query = $this->client->createSelect();
+            $select = array(
+                'query'         => Input::get('q'),
+                'start'         => 0,
+                'rows'          => 10,
+                //'fields'        => array('*', 'id', 'title', 'synopsis', 'cast', 'score'),
+            );
+
+            $query = $this->client->createSelect($select);
 
             // Query based on input user
             $query->setQuery(Input::get('q'));
+
+            // add debug settings
+            $debug = $query->getDebug();
+            $debug->setExplainOther('id:MA*');
 
             // manually create a request for the query
             $request = $this->client->createRequest($query);
@@ -64,10 +75,15 @@ class HomeController extends Controller
             // Execute the query and return the result
             $resultset = $this->client->select($query);
 
+            //$result = $client->extract($query);
+
+            $debugResult = $resultset->getDebug();
+
             // Pass the resultset to the view and return.
             return view('pages.home', array(
                 'q' => Input::get('q'),
                 'resultset' => $resultset,
+                'debugResult' => $debugResult,
             ));
         }
 
