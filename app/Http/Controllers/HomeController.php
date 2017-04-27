@@ -74,7 +74,10 @@ class HomeController extends Controller
             $numIng = $res4->getNumFound();
 
             $maxFound = array("code" => $numCode, "name" => $numName, "man" => $numMan, 'ing' => $numIng);
-            $higherFound = array_search(max($maxFound),$maxFound);
+            
+            $higherFound = array_search(max($maxFound),$maxFound); // return 1 max
+            //$higherFound = array_keys($maxFound,max($maxFound)); // return more than 1
+
             //echo $higherFound;
 
             // Find highest query on
@@ -97,7 +100,6 @@ class HomeController extends Controller
                 'handler'       => $handler,
                 'start'         => 0,
                 'rows'          => 10,
-                //'fields'        => 'score',
             );
             $query = $this->client->createSelect($select);
 
