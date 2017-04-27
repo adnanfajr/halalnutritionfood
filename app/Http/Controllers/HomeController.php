@@ -120,6 +120,7 @@ class HomeController extends Controller
 
             // Result
             $resultnum = $resultset->getNumFound();
+            $getquery = $debugResult->getQueryString();
 
             $results = array();
             foreach ($resultset as $document) {
@@ -131,7 +132,7 @@ class HomeController extends Controller
             }
 
             // Pass the result to json
-            return response()->json($data=[$results], $status=200, $headers=['query_result'=>$resultnum,'query_time'=>$s], $options=JSON_PRETTY_PRINT);
+            return response()->json($data=['query'=>$getquery,'query_result'=>$resultnum,'query_time'=>$s,'response'=>$results], $status=200, $headers=[], $options=JSON_PRETTY_PRINT);
         }
 
         // No query to execute, 404.
