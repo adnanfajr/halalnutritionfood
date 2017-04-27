@@ -68,10 +68,6 @@ class HomeController extends Controller
             $debug = $query->getDebug();
             $debug->setExplainOther('id:MA*');
 
-            // manually create a request for the query
-            $request = $this->client->createRequest($query);
-            $request->setHandler('bm25f');
-
             // Execute the query and return the result
             $resultset = $this->client->select($query);
 
@@ -93,5 +89,52 @@ class HomeController extends Controller
 
         // No query to execute, just return the search form.
         return view('pages.v2.home');
+    }
+
+    public function json()
+    {
+        if (Input::has('q')) {
+            $select = array(
+                'query'         => Input::get('q'),
+                'handler'       => 'bm25f',
+            );
+
+            $query = $this->client->createSelect($select);
+
+            // Query based on input user
+            $query->setQuery(Input::get('q'));
+
+            // add debug settings
+            $debug = $query->getDebug();
+            $debug->setExplainOther('id:MA*');
+
+            // Execute the query and return the result
+            $resultset = $this->client->select($query);
+
+            // Debug result
+            $debugResult = $resultset->getDebug();
+
+            // Get query time in seconds
+            $ms = $debugResult->getTiming()->getTime();
+            $s = $ms/1000;
+
+            // Result
+            $resultnum = $resultset->getNumFound();
+
+            $results = array();
+            foreach ($resultset as $document) {
+                $item = array();
+                foreach($document as $field => $value) {
+                    $item[$field] = $value;
+                }
+                $results[] = $item;
+            }
+
+            // Pass the result to json
+            return response()->json($data=[$results], $status=200, $headers=['query_result'=>$resultnum,'query_time'=>$s], $options=JSON_PRETTY_PRINT);
+        }
+
+        // No query to execute, 404.
+        return response()->json('ERROR', 404);
     }
 }

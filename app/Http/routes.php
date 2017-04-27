@@ -63,3 +63,4 @@ Route::controller('RDFBrowser', 'RDFBrowserController',[
 
 Route::get('/ping', 'HomeController@ping');
 Route::get('/search', 'HomeController@search');
+Route::get('/json', 'HomeController@json');
