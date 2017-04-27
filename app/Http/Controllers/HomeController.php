@@ -53,22 +53,22 @@ class HomeController extends Controller
     {
         if (Input::has('q')) {
             // Check on food_code
-            $qcode = array('query' => Input::get('q'),'handler' => 'bm25fc');
+            $qcode = array('query' => Input::get('q'),'querydefaultfield' => 'food_code');
             $q1 = $this->client->createSelect($qcode);
             $res1 = $this->client->select($q1);
             $numCode = $res1->getNumFound();
             // Check on food_name
-            $qname = array('query' => Input::get('q'),'handler' => 'bm25fn');
+            $qname = array('query' => Input::get('q'),'querydefaultfield' => 'food_name');
             $q2 = $this->client->createSelect($qname);
             $res2 = $this->client->select($q2);
             $numName = $res2->getNumFound();
             // Check on food_man
-            $qman = array('query' => Input::get('q'),'handler' => 'bm25fm');
+            $qman = array('query' => Input::get('q'),'querydefaultfield' => 'food_man');
             $q3 = $this->client->createSelect($qman);
             $res3 = $this->client->select($q3);
             $numMan = $res3->getNumFound();
             // Check on food_ing
-            $qing = array('query' => Input::get('q'),'handler' => 'bm25fi');
+            $qing = array('query' => Input::get('q'),'querydefaultfield' => 'food_ing');
             $q4 = $this->client->createSelect($qing);
             $res4 = $this->client->select($q4);
             $numIng = $res4->getNumFound();
