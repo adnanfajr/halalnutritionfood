@@ -52,13 +52,53 @@ class HomeController extends Controller
     public function index()
     {
         if (Input::has('q')) {
+            // Check on food_code
+            $qcode = array('query' => Input::get('q'),'handler' => 'bm25fc');
+            $q1 = $this->client->createSelect($qcode);
+            $res1 = $this->client->select($q1);
+            $numCode = $res1->getNumFound();
+            // Check on food_name
+            $qname = array('query' => Input::get('q'),'handler' => 'bm25fn');
+            $q2 = $this->client->createSelect($qname);
+            $res2 = $this->client->select($q2);
+            $numName = $res2->getNumFound();
+            // Check on food_man
+            $qman = array('query' => Input::get('q'),'handler' => 'bm25fm');
+            $q3 = $this->client->createSelect($qman);
+            $res3 = $this->client->select($q3);
+            $numMan = $res3->getNumFound();
+            // Check on food_ing
+            $qing = array('query' => Input::get('q'),'handler' => 'bm25fi');
+            $q4 = $this->client->createSelect($qing);
+            $res4 = $this->client->select($q4);
+            $numIng = $res4->getNumFound();
+
+            $maxFound = array("code" => $numCode, "name" => $numName, "man" => $numMan, 'ing' => $numIng);
+            $higherFound = array_search(max($maxFound),$maxFound);
+            //echo $higherFound;
+
+            // Find highest query on
+            if ($higherFound == 'code'){
+                $handler = 'bm25fc';
+            }
+            elseif ($higherFound == 'name'){
+                $handler = 'bm25fn';
+            }
+            elseif ($higherFound == 'man'){
+                $handler = 'bm25fm';
+            }
+            elseif ($higherFound == 'ing'){
+                $handler = 'bm25fi';
+            }
+
+            // Execute main search
             $select = array(
                 'query'         => Input::get('q'),
-                'handler'       => 'bm25f',
+                'handler'       => $handler,
                 'start'         => 0,
                 'rows'          => 10,
+                //'fields'        => 'score',
             );
-
             $query = $this->client->createSelect($select);
 
             // Query based on input user
@@ -68,11 +108,20 @@ class HomeController extends Controller
             $debug = $query->getDebug();
             $debug->setExplainOther('id:MA*');
 
-            // Execute the query and return the result
+            // get highlighting component and apply settings
+            $hl = $query->getHighlighting();
+            $hl->setFields('food_code, food_name, food_man, food_ing');
+            $hl->setSimplePrefix('<b>');
+            $hl->setSimplePostfix('</b>');
+
+             // Execute the query and return the result
             $resultset = $this->client->select($query);
 
             // Debug result
             $debugResult = $resultset->getDebug();
+
+            // this executes the query and returns the result
+            $highlighting = $resultset->getHighlighting();
 
             // Get query time in seconds
             $ms = $debugResult->getTiming()->getTime();
@@ -84,6 +133,7 @@ class HomeController extends Controller
                 'resultset' => $resultset,
                 'debugResult' => $debugResult,
                 's' => $s,
+                'handler' => $handler,
             ));
         }
 
@@ -94,6 +144,7 @@ class HomeController extends Controller
     public function json()
     {
         if (Input::has('q')) {
+            $hand = index()->$handler;
             $select = array(
                 'query'         => Input::get('q'),
                 'handler'       => 'bm25f',

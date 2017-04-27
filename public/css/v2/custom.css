@@ -91,8 +91,8 @@
     border-color: #14c07b;
 }
 
-.btn-primary:hover {
-    background-color: #009061;
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary:visited {
+    background-color: #009061 !important;
     border-color: #009061;
 }
 
