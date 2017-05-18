@@ -12,7 +12,7 @@ class CreateHalalSources extends Migration
      */
     public function up()
     {
-        Schema::create('halalSources', function(Blueprint $table)
+        Schema::create('halalsources', function(Blueprint $table)
         {
             $table->increments('id');
             $table->integer('hStatus');
@@ -28,7 +28,7 @@ class CreateHalalSources extends Migration
             $table->foreign('ingredient_id')->references('id')->on('ingredients')->onDelete('cascade');
 
             $table->integer('halal_id')->unsigned()->index();
-            $table->foreign('halal_id')->references('id')->on('halalSources')->onDelete('cascade');
+            $table->foreign('halal_id')->references('id')->on('halalsources')->onDelete('cascade');
 
             $table->timestamps();
         });
@@ -41,7 +41,7 @@ class CreateHalalSources extends Migration
      */
     public function down()
     {
-        Schema::drop('halalSources');
-        Schema::drop('foodProduct_halal');
+        Schema::drop('halalsources');
+        Schema::drop('ingredient_halal');
     }
 }

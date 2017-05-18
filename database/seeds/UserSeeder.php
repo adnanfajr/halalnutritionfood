@@ -15,15 +15,15 @@ class UserSeeder extends Seeder{
         $user = User::create(array(
             'first_name'    => 'Admin',
             'last_name'     => 'Istrator',
-            'email'         => 'admin@halal.dev',
-            'password'      => Hash::make('password')
+            'email'         => 'admin@halal.addi.is.its.ac.id',
+            'password'      => Hash::make('p4s5w0rD')
         ));
         $user->assignRole($adminRole);
 
         $user = User::create(array(
             'first_name'    => 'User',
             'last_name'     => 'User',
-            'email'         => 'user@halal.dev',
+            'email'         => 'user@halal.addi.is.its.ac.id',
             'password'      => Hash::make('userpassword')
         ));
         $user->assignRole($userRole);

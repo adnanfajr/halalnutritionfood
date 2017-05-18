@@ -52,6 +52,7 @@ class HomeController extends Controller
     public function index()
     {
         if (Input::has('q')) {
+            /*
             // Check on food_code
             $qcode = array('query' => Input::get('q'),'querydefaultfield' => 'food_code');
             $q1 = $this->client->createSelect($qcode);
@@ -93,7 +94,9 @@ class HomeController extends Controller
             elseif ($higherFound == 'ing'){
                 $handler = 'bm25fi';
             }
+            */
 
+            $handler = 'bm25fn';
             // Execute main search
             $select = array(
                 'query'         => Input::get('q'),
@@ -110,20 +113,11 @@ class HomeController extends Controller
             $debug = $query->getDebug();
             $debug->setExplainOther('id:MA*');
 
-            // get highlighting component and apply settings
-            $hl = $query->getHighlighting();
-            $hl->setFields('food_code, food_name, food_man, food_ing');
-            $hl->setSimplePrefix('<b>');
-            $hl->setSimplePostfix('</b>');
-
              // Execute the query and return the result
             $resultset = $this->client->select($query);
 
             // Debug result
             $debugResult = $resultset->getDebug();
-
-            // this executes the query and returns the result
-            $highlighting = $resultset->getHighlighting();
 
             // Get query time in seconds
             $ms = $debugResult->getTiming()->getTime();
@@ -146,10 +140,9 @@ class HomeController extends Controller
     public function json()
     {
         if (Input::has('q')) {
-            $hand = index()->$handler;
             $select = array(
                 'query'         => Input::get('q'),
-                'handler'       => 'bm25f',
+                'handler'       => 'bm25fn',
             );
 
             $query = $this->client->createSelect($select);

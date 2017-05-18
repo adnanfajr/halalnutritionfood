@@ -29,7 +29,7 @@
         </div>
         {!! Form::close() !!}
         
-        @if (isset($resultset) && isset($debugResult) && isset($s)) 
+        @if (isset($resultset) && isset($debugResult) && isset($s) && isset($handler)) 
         <br>
         <p>Your search took <strong>{{ $s }} seconds</strong> and yielded <strong>{{ $resultset->getNumFound() }}</strong> result(s) <span class="pull-right"><a href="{{ url('/') }}/json/?q={{ $debugResult->getQueryString() }}" target="_blank">raw output</a> - <a href="{{ url('/') }}:8983/solr/halal/{{ $handler }}/?q={{ $debugResult->getQueryString() }}" target="_blank">solr json</a></span></p>
         <hr />

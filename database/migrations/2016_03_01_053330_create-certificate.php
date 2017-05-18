@@ -21,10 +21,10 @@ class CreateCertificate extends Migration
             $table->timestamps();
         });
 
-        Schema::create('foodProduct_certificate', function(Blueprint $table)
+        Schema::create('foodproduct_certificate', function(Blueprint $table)
         {
-            $table->integer('foodProduct_id')->unsigned()->index();
-            $table->foreign('foodProduct_id')->references('id')->on('foodProducts')->onDelete('cascade');
+            $table->integer('foodproduct_id')->unsigned()->index();
+            $table->foreign('foodproduct_id')->references('id')->on('foodproducts')->onDelete('cascade');
 
             $table->integer('certificate_id')->unsigned()->index();
             $table->foreign('certificate_id')->references('id')->on('certificates')->onDelete('cascade');
@@ -41,6 +41,6 @@ class CreateCertificate extends Migration
     public function down()
     {
         Schema::drop('certificates');
-        Schema::drop('foodProduct_certificate');
+        Schema::drop('foodproduct_certificate');
     }
 }

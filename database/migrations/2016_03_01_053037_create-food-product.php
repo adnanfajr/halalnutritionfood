@@ -12,7 +12,7 @@ class CreateFoodProduct extends Migration
      */
     public function up()
     {
-        Schema::create('foodProducts', function (Blueprint $table) {
+        Schema::create('foodproducts', function (Blueprint $table) {
             $table->increments('id');
             $table->string('fCode');
             $table->string('fName');
@@ -50,6 +50,6 @@ class CreateFoodProduct extends Migration
      */
     public function down()
     {
-        Schema::drop('foodProducts');
+        Schema::drop('foodproducts');
     }
 }

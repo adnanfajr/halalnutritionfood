@@ -25,10 +25,10 @@ class CreateManufacture extends Migration
             $table->timestamps();
         });
 
-        Schema::create('foodProduct_manufacture', function(Blueprint $table)
+        Schema::create('foodproduct_manufacture', function(Blueprint $table)
         {
-            $table->integer('foodProduct_id')->unsigned()->index();
-            $table->foreign('foodProduct_id')->references('id')->on('foodProducts')->onDelete('cascade');
+            $table->integer('foodproduct_id')->unsigned()->index();
+            $table->foreign('foodproduct_id')->references('id')->on('foodproducts')->onDelete('cascade');
 
             $table->integer('manufacture_id')->unsigned()->index();
             $table->foreign('manufacture_id')->references('id')->on('manufactures')->onDelete('cascade');
@@ -45,6 +45,6 @@ class CreateManufacture extends Migration
     public function down()
     {
         Schema::drop('manufactures');
-        Schema::drop('foodProduct_manufacture');
+        Schema::drop('foodproduct_manufacture');
     }
 }

@@ -20,10 +20,10 @@ class CreateIngredient extends Migration
             $table->timestamps();
         });
 
-        Schema::create('foodProduct_ingredient', function(Blueprint $table)
+        Schema::create('foodproduct_ingredient', function(Blueprint $table)
         {
-            $table->integer('foodProduct_id')->unsigned()->index();
-            $table->foreign('foodProduct_id')->references('id')->on('foodProducts')->onDelete('cascade');
+            $table->integer('foodproduct_id')->unsigned()->index();
+            $table->foreign('foodproduct_id')->references('id')->on('foodproducts')->onDelete('cascade');
 
             $table->integer('ingredient_id')->unsigned()->index();
             $table->foreign('ingredient_id')->references('id')->on('ingredients')->onDelete('cascade');
@@ -40,6 +40,6 @@ class CreateIngredient extends Migration
     public function down()
     {
         Schema::drop('ingredients');
-        Schema::drop('foodProduct_ingredient');
+        Schema::drop('foodproduct_ingredient');
     }
 }
