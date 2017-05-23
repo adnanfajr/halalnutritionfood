@@ -39,7 +39,7 @@ class CreateIngredient extends Migration
      */
     public function down()
     {
-        Schema::drop('ingredients');
-        Schema::drop('foodproduct_ingredient');
+        Schema::dropIfExists('foodproduct_ingredient');
+        Schema::dropIfExists('ingredients');
     }
 }

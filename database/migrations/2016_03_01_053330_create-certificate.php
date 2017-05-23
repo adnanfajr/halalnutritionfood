@@ -40,7 +40,7 @@ class CreateCertificate extends Migration
      */
     public function down()
     {
-        Schema::drop('certificates');
-        Schema::drop('foodproduct_certificate');
+        Schema::dropIfExists('foodproduct_certificate');
+        Schema::dropIfExists('certificates');
     }
 }

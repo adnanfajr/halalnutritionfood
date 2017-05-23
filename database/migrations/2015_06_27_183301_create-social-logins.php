@@ -29,6 +29,6 @@ class CreateSocialLogins extends Migration
      */
     public function down()
     {
-        Schema::drop('social_logins');
+        Schema::dropIfExists('social_logins');
     }
 }

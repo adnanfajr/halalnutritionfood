@@ -44,7 +44,7 @@ class CreateManufacture extends Migration
      */
     public function down()
     {
-        Schema::drop('manufactures');
-        Schema::drop('foodproduct_manufacture');
+        Schema::dropIfExists('foodproduct_manufacture');
+        Schema::dropIfExists('manufactures');
     }
 }

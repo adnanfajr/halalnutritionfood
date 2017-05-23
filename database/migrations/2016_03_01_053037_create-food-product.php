@@ -50,6 +50,6 @@ class CreateFoodProduct extends Migration
      */
     public function down()
     {
-        Schema::drop('foodproducts');
+        Schema::dropIfExists('foodproducts');
     }
 }

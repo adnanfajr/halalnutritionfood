@@ -41,7 +41,7 @@ class CreateHalalSources extends Migration
      */
     public function down()
     {
-        Schema::drop('halalsources');
-        Schema::drop('ingredient_halal');
+        Schema::dropIfExists('ingredient_halal');
+        Schema::dropIfExists('halalsources');
     }
 }
