@@ -96,7 +96,7 @@ class HomeController extends Controller
             }
             */
 
-            $handler = 'bm25fn';
+            $handler = 'bm25f';
             // Execute main search
             $select = array(
                 'query'         => Input::get('q'),
@@ -142,7 +142,7 @@ class HomeController extends Controller
         if (Input::has('q')) {
             $select = array(
                 'query'         => Input::get('q'),
-                'handler'       => 'bm25fn',
+                'handler'       => 'bm25f',
             );
 
             $query = $this->client->createSelect($select);
