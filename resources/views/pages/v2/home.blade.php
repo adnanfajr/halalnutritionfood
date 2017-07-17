@@ -31,14 +31,19 @@
         
         @if (isset($resultset) && isset($debugResult) && isset($s) && isset($handler)) 
         <br>
-        <p>Your search took <strong>{{ $s }} seconds</strong> and yielded <strong>{{ $resultset->getNumFound() }}</strong> result(s) <span class="pull-right"><a href="{{ url('/') }}/json/?q={{ $debugResult->getQueryString() }}" target="_blank">raw output</a> - <a href="{{ url('/') }}:8983/solr/halal/{{ $handler }}/?q={{ $debugResult->getQueryString() }}" target="_blank">solr json</a></span></p>
+        <p>Your search took <strong>{{ $s }} seconds</strong> and yielded <strong>{{ $resultset->getNumFound() }}</strong> result(s) <span class="pull-right"><a href="{{ url('/') }}/json/?q={{ $debugResult->getQueryString() }}" target="_blank">raw output</a> - <a href="{{ url('/') }}:8983/solr/halal/{{ $handler }}/?q={{ $debugResult->getQueryString() }}&debugQuery=true" target="_blank">solr json</a></span></p>
         <hr />
-            @foreach ($resultset as $doc)
-            <a href="{{ url('foodproduct', ['id' => $doc->id]) }}"><h3>{{ implode(', ', (array)$doc->food_name) }} ({{ implode(', ', (array)$doc->food_code) }})</h3></a>
-            <small>{{ implode(', ', (array)$doc->food_man) }}</small><small class="pull-right">relevance score : <strong>{{ $doc->score }}</strong></small>
-            <p style="margin-top:5px;font-style:italic">{{ implode(', ', (array)$doc->food_ing) }}</p>
-            <hr/>
-            @endforeach
+            @if (count($resultset))
+                @foreach ($resultset as $doc)
+                <a href="{{ url('foodproduct', ['id' => $doc->id]) }}"><h3>{{ implode(', ', (array)$doc->food_name) }} ({{ implode(', ', (array)$doc->food_code) }})</h3></a>
+                <small>{{ implode(', ', (array)$doc->food_man) }}</small><small class="pull-right">relevance score : <strong>{{ $doc->score }}</strong></small>
+                <p style="margin-top:5px;font-style:italic">{{ implode(', ', (array)$doc->food_ing) }}</p>
+                <hr/>
+                @endforeach
+            @else
+                <h3>Maaf hasil pencarian tidak ditemukan.</h3>
+                <small>Kata kunci <strong>{{ $debugResult->getQueryString() }}</strong> yang anda cari tidak ada dalam database.</small>
+            @endif
         @endif
         <br>
         </div>

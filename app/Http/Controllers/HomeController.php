@@ -52,7 +52,10 @@ class HomeController extends Controller
     public function index()
     {
         if (Input::has('q')) {
+
             /*
+            // Pengecekan cide, lebih cenderung ke field mana, tapi karena SOLR nya udah bisa cari tanpa fokus ke MainField, jadi ini gak kepake
+
             // Check on food_code
             $qcode = array('query' => Input::get('q'),'querydefaultfield' => 'food_code');
             $q1 = $this->client->createSelect($qcode);
@@ -94,13 +97,14 @@ class HomeController extends Controller
             elseif ($higherFound == 'ing'){
                 $handler = 'bm25fi';
             }
-            */
 
             $handler = 'bm25f';
+            */
+            
             // Execute main search
             $select = array(
                 'query'         => Input::get('q'),
-                'handler'       => $handler,
+                'handler'       => 'bm25f',
                 'start'         => 0,
                 'rows'          => 10,
             );
@@ -129,7 +133,7 @@ class HomeController extends Controller
                 'resultset' => $resultset,
                 'debugResult' => $debugResult,
                 's' => $s,
-                'handler' => $handler,
+                'handler' => 'bm25f',
             ));
         }
 
