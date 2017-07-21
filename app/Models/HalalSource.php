@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class HalalSource extends Model
 {
-    protected $table = 'halalSources';
+    protected $table = 'halalsources';
 
     protected $fillable = [
         'hStatus',
