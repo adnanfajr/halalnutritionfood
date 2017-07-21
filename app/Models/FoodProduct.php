@@ -41,12 +41,12 @@ class FoodProduct extends Model
 
     public function ingredient()
     {
-        return $this->belongsToMany('App\Models\Ingredient','foodProduct_ingredient','foodProduct_id')->withTimestamps();
+        return $this->belongsToMany('App\Models\Ingredient','foodproduct_ingredient','foodProduct_id')->withTimestamps();
     }
 
     public function certificate()
     {
-        return $this->belongsToMany('App\Models\Certificate','foodProduct_certificate','foodProduct_id')->withTimestamps();
+        return $this->belongsToMany('App\Models\Certificate','foodproduct_certificate','foodProduct_id')->withTimestamps();
     }
 
     public function getIngredientListAttribute()
