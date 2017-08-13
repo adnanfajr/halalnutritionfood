@@ -72,6 +72,8 @@
                         <li><a href="{{ route('authenticated.logout') }}">Logout</a></li>
                     </ul>
                 @if(Auth::user()->roles[0]->name == "administrator")
+                    <!-- -->
+                @endif
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Submit <span class="caret"></span></a>
                     <ul class="dropdown-menu">
@@ -86,7 +88,6 @@
                         <li><a href="{{ route('additive.index') }}">Additive</a></li>
                     </ul>
                 </li>
-                @endif
                 </li>
                 @endif
             </ul>

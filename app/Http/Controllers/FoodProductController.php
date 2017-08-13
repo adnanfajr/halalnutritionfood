@@ -64,7 +64,7 @@ class FoodProductController extends Controller
     public function store(Request $request)
     {
         $input = Input::all();
-        $addRules = ['unique:foodProducts'];
+        $addRules = ['unique:foodproducts'];
         $addMessages = [
             'fCode.unique' => 'Food code must unique',
         ];
